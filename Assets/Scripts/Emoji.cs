@@ -5,6 +5,7 @@ public class Emoji
     public string Name;
     public Sprite Image;
     public Flavor Flavor;
+    public EmojiCategory Category;
 
     public Emoji(string name, Sprite image, Flavor flavor)
     {
@@ -19,4 +20,11 @@ public class Emoji
         Image = emojiData.Image;
         Flavor = emojiData.Flavor;
     }
+}
+
+public enum EmojiCategory
+{
+    Emoji,
+    GoodReaction,
+    BadReaction,
 }
