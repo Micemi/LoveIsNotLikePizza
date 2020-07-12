@@ -8,7 +8,7 @@ public class Pizza
     public Difficulty Difficulty;
     [Tooltip("Son los flavors disponibles para que la pizza randomice. No puede ser menor que la cantidad de la dificultad. " +
              "SelectFlavors elije una cantidad (de Difficulty) según esta lista.")]
-    public List<Flavor> AvailableFlavors = new List<Flavor>();
+    public List<Flavor> AvailableFlavors;
     
 
     private List<Flavor> flavors = new List<Flavor>();
@@ -35,5 +35,18 @@ public class Pizza
     {
         AvailableFlavors.Shuffle();
         flavors = AvailableFlavors.GetRange(0, Difficulty.FlavorsQuantity);
+    }
+
+    public Emoji GetRandomEmoji()
+    {
+        if (flavors.Count == 0)
+        {
+            Debug.LogError("No Random Emoji available because there is no flavors");
+            return null;
+        }
+
+        Flavor randomFlavor = flavors.GetRandom();
+        List<EmojiData> availableEmojis = EmojiData.EmojisByFlavor[randomFlavor];
+        return new Emoji(availableEmojis.GetRandom());
     }
 }

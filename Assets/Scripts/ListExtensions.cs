@@ -16,4 +16,9 @@ public static class ListExtensions
             list[n] = value;
         }
     }
+
+    public static T GetRandom<T>(this IList<T> list)
+    {
+        return list[rng.Next(0, list.Count)];
+    }
 }
