@@ -7,18 +7,14 @@ public class Emoji
     public Flavor Flavor;
     public EmojiCategory Category;
 
-    public Emoji(string name, Sprite image, Flavor flavor)
-    {
-        Name = name;
-        Image = image;
-        Flavor = flavor;
-    }
+    public Emoji() {}
 
     public Emoji(EmojiData emojiData)
     {
         Name = emojiData.Name;
         Image = emojiData.Image;
         Flavor = emojiData.Flavor;
+        Category = emojiData.Category;
     }
 }
 

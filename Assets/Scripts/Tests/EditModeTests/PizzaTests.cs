@@ -6,9 +6,14 @@ using UnityEngine.TestTools;
 
 namespace Tests
 {
+    public static class TestsHelpers
+    {
+        public static readonly List<Flavor> AllFlavors =
+            new List<Flavor>(new[] {Flavor.Creepy, Flavor.Cute, Flavor.Geek, Flavor.Spicy});
+    }
+
     public class PizzaTests
     {
-        public static readonly List<Flavor> AllFlavors = new List<Flavor>(new [] {Flavor.Creepy, Flavor.Cute, Flavor.Geek, Flavor.Spicy}); 
         
         [TestCase(0)]
         [TestCase(1)]
@@ -19,7 +24,7 @@ namespace Tests
         {
             Difficulty difficulty = new Difficulty {FlavorsQuantity = flavorsQuantity};
             
-            Pizza pizza = new Pizza("Pizza", null, difficulty, AllFlavors);
+            Pizza pizza = new Pizza("Pizza", null, difficulty, TestsHelpers.AllFlavors);
 
             Assert.That(pizza.Flavors.Count, Is.EqualTo(flavorsQuantity));
         }

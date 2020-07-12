@@ -20,6 +20,7 @@ public class Chat
     public ChatState State => state;
 
     public bool ChatFinished => state == ChatState.Finished;
+    public bool CanSendPlayerEmoji => state == ChatState.WaitingForPlayerEmoji;
 
     public event Action<Emoji> OnPizzaSendsEmoji;
     public event Action<Emoji> OnPizzaSendsReaction;
@@ -75,6 +76,8 @@ public class Chat
 
     public void SendPlayerEmoji(Emoji emoji)
     {
+        if (!CanSendPlayerEmoji) return;
+        
         Emoji reactionEmoji;
         bool acceptedEmoji = Pizza.Flavors.Contains(emoji.Flavor);
         if (acceptedEmoji)
@@ -85,6 +88,7 @@ public class Chat
         }
         else
         {
+            CurrentTime -= Pizza.Difficulty.TimePenalty;
             float newHotness = CurrentHotness - Pizza.Difficulty.HotnessPenalty;
             CurrentHotness = Mathf.Max(0, newHotness);
             reactionEmoji = new Emoji(EmojiData.EmojisByCategory[EmojiCategory.BadReaction].GetRandom());
