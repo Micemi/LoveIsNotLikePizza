@@ -30,13 +30,10 @@ public class ChatPoints : ScriptableSingleton<ChatPoints>
         }
     }
 
-    private void Awake()
-    {
-        pointConversions.Sort((p, q) => p.UpperLimit.CompareTo(q.UpperLimit));
-    }
-
     private float PGetPoints(float hotness)
     {
+        pointConversions.Sort((p, q) => p.UpperLimit.CompareTo(q.UpperLimit));
+
         for (int i = 0; i < pointConversions.Count; i++)
         {
             if (pointConversions[i].UpperLimit > hotness)
