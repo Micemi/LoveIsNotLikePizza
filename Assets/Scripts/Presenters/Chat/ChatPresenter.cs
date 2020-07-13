@@ -11,7 +11,8 @@ public class ChatPresenter : MonoBehaviour
     private Chat chat;
 
     public float CurrentTime => chat.CurrentTime;
-    
+    public float CurrentHotness => chat.CurrentHotness;
+
     private void Awake()
     {
         chat = new Chat(new Pizza(pizzaData));
