@@ -39,7 +39,6 @@ public class ChatPoints : ScriptableSingleton<ChatPoints>
     {
         for (int i = 0; i < pointConversions.Count; i++)
         {
-            Debug.Log($"PointConversion: {pointConversions[i].UpperLimit}, {pointConversions[i].Points}");
             if (pointConversions[i].UpperLimit > hotness)
                 return pointConversions[i].Points;
         }

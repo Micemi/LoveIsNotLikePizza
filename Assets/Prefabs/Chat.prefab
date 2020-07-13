@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 1856209873231888434}
   - component: {fileID: 1856209873231888436}
   - component: {fileID: 1856209873231888437}
+  - component: {fileID: 4823159343158352825}
   m_Layer: 5
   m_Name: Emoji2
   m_TagString: Untagged
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -222,6 +223,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4823159343158352825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856209873231888435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a3a0bddab0e3240bdcbc69254d9184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1856209873231888437}
 --- !u!1 &1856209873291510215
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +751,7 @@ GameObject:
   - component: {fileID: 1856209873861266256}
   - component: {fileID: 1856209873861266258}
   - component: {fileID: 1856209873861266259}
+  - component: {fileID: 3682121693498518550}
   m_Layer: 5
   m_Name: EmojiContainer
   m_TagString: Untagged
@@ -788,7 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -804,6 +819,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3682121693498518550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856209873861266257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b581cb933841843b5091d10b62751f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emojiPresenters:
+  - {fileID: 2133627406798771913}
+  - {fileID: 4823159343158352825}
+  - {fileID: 3222644187325516688}
+  - {fileID: 6898101840261591502}
+  chat: {fileID: 1660545011570657159}
 --- !u!1 &1856209873963885282
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +996,7 @@ GameObject:
   - component: {fileID: 1856209874261048951}
   - component: {fileID: 1856209874261048953}
   - component: {fileID: 1856209874261048950}
+  - component: {fileID: 6898101840261591502}
   m_Layer: 5
   m_Name: Emoji4
   m_TagString: Untagged
@@ -1010,7 +1044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1026,6 +1060,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6898101840261591502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856209874261048948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a3a0bddab0e3240bdcbc69254d9184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1856209874261048950}
 --- !u!1 &1856209874309351137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,6 +1194,7 @@ GameObject:
   - component: {fileID: 1856209874763453049}
   - component: {fileID: 1856209874763453051}
   - component: {fileID: 1856209874763453048}
+  - component: {fileID: 2133627406798771913}
   m_Layer: 5
   m_Name: Emoji1
   m_TagString: Untagged
@@ -1194,7 +1242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1210,6 +1258,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2133627406798771913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856209874763453046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a3a0bddab0e3240bdcbc69254d9184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1856209874763453048}
 --- !u!1 &1856209874960355400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1356,7 @@ GameObject:
   - component: {fileID: 1856209875009862472}
   - component: {fileID: 1856209875009862474}
   - component: {fileID: 1856209875009862475}
+  - component: {fileID: 3222644187325516688}
   m_Layer: 5
   m_Name: Emoji3
   m_TagString: Untagged
@@ -1342,7 +1404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1358,6 +1420,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3222644187325516688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856209875009862473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a3a0bddab0e3240bdcbc69254d9184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1856209875009862475}
 --- !u!1 &1856209875069968939
 GameObject:
   m_ObjectHideFlags: 0

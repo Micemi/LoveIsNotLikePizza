@@ -9,9 +9,11 @@ public class ChatPresenter : MonoBehaviour
     [SerializeField] private PizzaData pizzaData;
     
     private Chat chat;
+    public Chat Chat => chat;
 
     public float CurrentTime => chat.CurrentTime;
     public float CurrentHotness => chat.CurrentHotness;
+    public void SendPlayerEmoji(Emoji emoji) => chat.SendPlayerEmoji(emoji);
 
     private void Awake()
     {
