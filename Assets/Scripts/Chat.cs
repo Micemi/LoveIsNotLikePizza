@@ -13,8 +13,11 @@ public class Chat
 
     public readonly Pizza Pizza;
 
-    public float CurrentTime;
-    public float CurrentHotness = 0.5f;
+    private float currentTime;
+    public float CurrentTime => currentTime;
+
+    private float currentHotness = 0.5f;
+    public float CurrentHotness => currentHotness;
 
     private ChatState state = ChatState.WaitingForPizzaEmoji;
     public ChatState State => state;
@@ -24,17 +27,18 @@ public class Chat
 
     public event Action<Emoji> OnPizzaSendsEmoji;
     public event Action<Emoji> OnPizzaSendsReaction;
+    public event Action<float> OnChatFinish; // float is the points
 
     public Chat(Pizza pizza)
     {
         Pizza = pizza;
     }
-    
+
     public void Start()
     {
-        CurrentTime = Pizza.Difficulty.InitialTime;
+        currentTime = Pizza.Difficulty.InitialTime;
     }
-    
+
     public void Tick(float deltaTime)
     {
         switch (state)
@@ -49,21 +53,21 @@ public class Chat
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        
+
         DecreaseTime(deltaTime);
         DecreaseHotness(deltaTime);
     }
 
     private void DecreaseHotness(float deltaTime)
     {
-        float newHotness = CurrentHotness - Pizza.Difficulty.CoolingPerSec * deltaTime;
-        CurrentHotness = Mathf.Max(0, newHotness);
+        float newHotness = currentHotness - Pizza.Difficulty.CoolingPerSec * deltaTime;
+        currentHotness = Mathf.Max(0, newHotness);
     }
 
     private void DecreaseTime(float deltaTime)
     {
-        CurrentTime -= deltaTime;
-        if (CurrentTime <= 0)
+        currentTime -= deltaTime;
+        if (currentTime <= 0)
             EndChat();
     }
 
@@ -77,20 +81,20 @@ public class Chat
     public void SendPlayerEmoji(Emoji emoji)
     {
         if (!CanSendPlayerEmoji) return;
-        
+
         Emoji reactionEmoji;
         bool acceptedEmoji = Pizza.Flavors.Contains(emoji.Flavor);
         if (acceptedEmoji)
         {
-            float newHotness = CurrentHotness + Pizza.Difficulty.HotnessBonus;
-            CurrentHotness = Mathf.Min(1, newHotness);
+            float newHotness = currentHotness + Pizza.Difficulty.HotnessBonus;
+            currentHotness = Mathf.Min(1, newHotness);
             reactionEmoji = new Emoji(EmojiData.EmojisByCategory[EmojiCategory.GoodReaction].GetRandom());
         }
         else
         {
-            CurrentTime -= Pizza.Difficulty.TimePenalty;
-            float newHotness = CurrentHotness - Pizza.Difficulty.HotnessPenalty;
-            CurrentHotness = Mathf.Max(0, newHotness);
+            currentTime -= Pizza.Difficulty.TimePenalty;
+            float newHotness = currentHotness - Pizza.Difficulty.HotnessPenalty;
+            currentHotness = Mathf.Max(0, newHotness);
             reactionEmoji = new Emoji(EmojiData.EmojisByCategory[EmojiCategory.BadReaction].GetRandom());
         }
         OnPizzaSendsReaction?.Invoke(reactionEmoji);
@@ -99,7 +103,9 @@ public class Chat
 
     private void EndChat()
     {
+        float points = ChatPoints.GetPoints(CurrentHotness);
+        OnChatFinish?.Invoke(points);
         state = ChatState.Finished;
     }
-    
+
 }

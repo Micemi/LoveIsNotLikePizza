@@ -236,5 +236,48 @@ namespace Tests
             Assert.That(wasOnPizzaSendsReactionCalled, Is.False);
             Assert.That(reactionSent, Is.Null);
         }
+
+        [TestCase(0.00f,  1000f)]
+        [TestCase(0.39f,  1000f)]
+        [TestCase(0.40f,  5000f)]
+        [TestCase(0.69f,  5000f)]
+        [TestCase(0.70f,  7000f)]
+        [TestCase(0.94f,  7000f)]
+        [TestCase(0.95f, 10000f)]
+        [TestCase(1.00f, 10000f)]
+        public void Chat_Finishes_When_Out_Of_Time(float finishHotness, float expectedPoints)
+        {
+            // Arrange
+            float deltaHotness = finishHotness - 0.5f;
+            
+            Difficulty difficulty = new Difficulty {FlavorsQuantity = 4, InitialTime = 40f, CoolingPerSec = 0f, HotnessBonus = deltaHotness};
+            Pizza pizza = new Pizza("Pizza", null, difficulty, TestsHelpers.AllFlavors);
+            Chat chat = new Chat(pizza);
+            chat.Start();
+
+            chat.Tick(1f); // first tick
+
+            Emoji playerEmoji = new Emoji(EmojiData.EmojisByFlavor[Flavor.Spicy].GetRandom());
+            chat.SendPlayerEmoji(playerEmoji); // Setting Hotness to 0.5 + deltaHotness
+
+            bool wasOnChatFinishCalled = false;
+            float finishPoints = 0;
+            chat.OnChatFinish += (points) =>
+            {
+                wasOnChatFinishCalled = true;
+                finishPoints = points;
+            };
+
+            // Act
+            chat.Tick(39f); // ending tick
+            
+            // Assert
+            Assert.That(chat.State, Is.EqualTo(Chat.ChatState.Finished));
+            Assert.That(chat.CurrentTime, Is.EqualTo(0f).Within(0.01f));
+            Assert.That(chat.CurrentHotness, Is.EqualTo(finishHotness).Within(0.001f));
+
+            Assert.That(wasOnChatFinishCalled, Is.True);
+            Assert.That(finishPoints, Is.EqualTo(expectedPoints).Within(0.01f));
+        }
     }
 }
