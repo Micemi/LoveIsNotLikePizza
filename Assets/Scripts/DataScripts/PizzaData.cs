@@ -20,7 +20,7 @@ public class PizzaData : ScriptableObject
         }
     }
 
-    [MenuItem("Love Pizza/Refresh Pizza Database")]
+    [MenuItem("Love Pizza/Refresh Pizza Database"), RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void ReloadPizzas()
     {
         pizzas = new List<PizzaData>(Resources.LoadAll<PizzaData>("Data/Pizzas"));

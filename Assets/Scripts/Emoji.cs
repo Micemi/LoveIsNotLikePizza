@@ -17,10 +17,3 @@ public class Emoji
         Category = emojiData.Category;
     }
 }
-
-public enum EmojiCategory
-{
-    Emoji,
-    GoodReaction,
-    BadReaction,
-}

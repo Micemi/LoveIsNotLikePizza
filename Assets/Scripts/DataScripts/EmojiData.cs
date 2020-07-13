@@ -42,7 +42,7 @@ public class EmojiData : ScriptableObject
         }
     }
 
-    [MenuItem("Love Pizza/Refresh Emoji Database")]
+    [MenuItem("Love Pizza/Refresh Emoji Database"), RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void ReloadEmojis()
     {
         emojis = new List<EmojiData>(Resources.LoadAll<EmojiData>("Data/Emojis"));
