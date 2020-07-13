@@ -8,7 +8,7 @@ public class Chat
     {
         WaitingForPlayerEmoji,
         WaitingForPizzaEmoji,
-        Finished
+        Finished,
     }
 
     public readonly Pizza Pizza;
