@@ -13,13 +13,13 @@ public class MainMenu : MonoBehaviour {
     //  Las acciones de referenciado se hacen desde el mismo unity arrastrando los gameobj con sus scripts
     public void Play(){
         //  Scene manager is used from the library of unityengine
-        //  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   //  this loads the next lvl in queue
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   //  this loads the next lvl in queue
         //  This snippet was extracted from (8:40) of the video
         //  The queue is edited in the build settings (9:14)
         
         //  We can also:
         Debug.Log("Changed Scene");
-        SceneManager.LoadScene("Swiper"); //this works fine but if we order the scenes correctly in the build settings, the option above is better
+        //SceneManager.LoadScene("Swiper"); //this works fine but if we order the scenes correctly in the build settings, the option above is better
     }
     public void OpenSettings(){
         Debug.Log("Opened Settings Menu");
