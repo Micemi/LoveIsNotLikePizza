@@ -14,7 +14,7 @@ public class Chat
     public readonly Pizza Pizza;
 
     private float currentTime;
-    public float CurrentTime => currentTime;
+    public float CurrentTime => Mathf.Max(0, currentTime);
 
     private float currentHotness = 0.5f;
     public float CurrentHotness => currentHotness;

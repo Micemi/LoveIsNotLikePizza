@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Signo Stop
   m_EditorClassIdentifier: 
   Name: Signo Stop
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 7172b6af8bd4df84f899e069d7765102, type: 3}
   Flavor: 0
   Category: 2

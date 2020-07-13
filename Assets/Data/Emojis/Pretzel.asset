@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Pretzel
   m_EditorClassIdentifier: 
   Name: Pretzel
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 76e32aac999aa9f4097670437d069fa2, type: 3}
   Flavor: 4
   Category: 0
