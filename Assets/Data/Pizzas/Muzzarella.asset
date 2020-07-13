@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Muzzarella
   m_EditorClassIdentifier: 
   Name: Muzzarella
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: c2b10f2cd6a42714f9184037b3aa904a, type: 3}
   Difficulty: {fileID: 11400000, guid: a52f3ff5376f81246a9998a4eccb1762, type: 2}
-  AvailableFlavors: 010000000200000004000000
+  AvailableFlavors: 020000000100000004000000

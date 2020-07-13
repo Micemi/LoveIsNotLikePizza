@@ -29,6 +29,7 @@ public class Pizza
         Image = pizzaData.Image;
         Difficulty = new Difficulty(pizzaData.Difficulty);
         AvailableFlavors = pizzaData.AvailableFlavors;
+        SetFlavors();
     }
     
     private void SetFlavors()
