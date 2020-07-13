@@ -18,6 +18,7 @@ public class ChatPresenter : MonoBehaviour
     private void Awake()
     {
         chat = new Chat(new Pizza(pizzaData));
+        chat.OnChatFinish += FinishChat;
     }
 
     private void Start()
@@ -28,5 +29,10 @@ public class ChatPresenter : MonoBehaviour
     private void Update()
     {
         chat.Tick(Time.deltaTime);
+    }
+
+    private void FinishChat(float points)
+    {
+        Debug.Log($"Yay! You got {points} points!");
     }
 }
