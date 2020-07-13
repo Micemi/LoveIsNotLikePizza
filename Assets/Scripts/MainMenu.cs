@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour {
         
         //  We can also:
         Debug.Log("Changed Scene");
-        SceneManager.LoadScene("Swiper");
+        SceneManager.LoadScene("Swiper"); //this works fine but if we order the scenes correctly in the build settings, the option above is better
     }
     public void OpenSettings(){
         Debug.Log("Opened Settings Menu");
