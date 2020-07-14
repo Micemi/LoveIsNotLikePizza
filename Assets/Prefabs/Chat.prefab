@@ -263,13 +263,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f3d38c23dfd0d941846014f96352d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pizzaData: {fileID: 11400000, guid: 5600ae2c7661d834999bef3bbff1491b, type: 2}
   messageContainer: {fileID: 4932509147527502063}
   messageScroller: {fileID: 4732342309571492563}
   playerMessagePrefab: {fileID: 4670761065581791897, guid: 44e950ec1262270468bf51dac37ad53f,
     type: 3}
   pizzaMessagePrefab: {fileID: 2497114756500076611, guid: a45528b56cd32214ab8de5d82cbcc230,
     type: 3}
+  timeBetweenMessages: 1
+  wasWaitingForPlayerEmojiFired: 0
 --- !u!1 &1856209873636442547
 GameObject:
   m_ObjectHideFlags: 0

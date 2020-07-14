@@ -5,11 +5,6 @@ using UnityEngine.UI;
 
 public class ChatPresenter : MonoBehaviour
 {
-    // TODO: TEMP WILL REMOVE
-    // de alguna forma hay que inyectarle la pizza a esto
-    [SerializeField]
-    private PizzaData pizzaData;
-
     [Header("Messages")]
 
     [SerializeField]
@@ -48,7 +43,8 @@ public class ChatPresenter : MonoBehaviour
 
     private void Awake()
     {
-        chat = new Chat(new Pizza(pizzaData));
+        // TODO: no sacar una pizza random, sacar la pizza que me pasó el Swiper
+        chat = new Chat(Game.Current.RemainingPizzas.GetRandom());
         chat.OnPizzaSendsEmoji += EnqueuePizzaMessage;
         chat.OnPizzaSendsReaction += EnqueuePizzaMessage;
         chat.OnChatFinish += FinishChat;

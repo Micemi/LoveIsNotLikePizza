@@ -3,12 +3,49 @@ using UnityEngine;
 
 public class Pizza
 {
+    private static Dictionary<PizzaState, List<Pizza>> pizzasByState;
+    public static Dictionary<PizzaState, List<Pizza>> PizzasByState
+    {
+        get
+        {
+            if (pizzasByState == null)
+                ClearPizzasByState();
+
+            return pizzasByState;
+        }
+    }
+    public static void ClearPizzasByState()
+    {
+        pizzasByState = new Dictionary<PizzaState, List<Pizza>>
+        {
+            [PizzaState.Pending]  = new List<Pizza>(),
+            [PizzaState.Rejected] = new List<Pizza>(),
+            [PizzaState.Matched]  = new List<Pizza>(),
+            [PizzaState.Chatted]  = new List<Pizza>(),
+        };
+    }
+
+
     public string Name;
     public Sprite Image;
     public Difficulty Difficulty;
     [Tooltip("Son los flavors disponibles para que la pizza randomice. No puede ser menor que la cantidad de la dificultad. " +
              "SelectFlavors elije una cantidad (de Difficulty) según esta lista.")]
     public List<Flavor> AvailableFlavors;
+    
+    private PizzaState state = PizzaState.Pending;
+    public PizzaState State
+    {
+        get => state;
+        set
+        {
+            PizzasByState[state].Remove(this);
+            state = value;
+            PizzasByState[state].Add(this);
+        }
+    }
+
+    public float Points = 0;
     
 
     private List<Flavor> flavors = new List<Flavor>();
@@ -21,6 +58,7 @@ public class Pizza
         Difficulty = difficulty;
         AvailableFlavors = availableFlavors;
         SetFlavors();
+        pizzasByState[state].Add(this);
     }
 
     public Pizza(PizzaData pizzaData)
@@ -30,6 +68,7 @@ public class Pizza
         Difficulty = new Difficulty(pizzaData.Difficulty);
         AvailableFlavors = pizzaData.AvailableFlavors;
         SetFlavors();
+        pizzasByState[state].Add(this);
     }
     
     private void SetFlavors()
@@ -50,4 +89,13 @@ public class Pizza
         List<EmojiData> availableEmojis = EmojiData.EmojisByFlavor[randomFlavor];
         return new Emoji(availableEmojis.GetRandom());
     }
+}
+
+
+public enum PizzaState
+{
+    Pending,
+    Rejected,
+    Matched,
+    Chatted,
 }
