@@ -28,6 +28,8 @@ public class ChatPresenter : MonoBehaviour
     private Chat chat;
     public Chat Chat => chat;
 
+    private Pizza pizza;
+
     public float CurrentTime => chat.CurrentTime;
     public float CurrentHotness => chat.CurrentHotness;
     
@@ -43,8 +45,10 @@ public class ChatPresenter : MonoBehaviour
 
     private void Awake()
     {
+        pizza = Game.Current.RemainingPizzas.GetRandom();
+        
         // TODO: no sacar una pizza random, sacar la pizza que me pasó el Swiper
-        chat = new Chat(Game.Current.RemainingPizzas.GetRandom());
+        chat = new Chat(pizza);
         chat.OnPizzaSendsEmoji += EnqueuePizzaMessage;
         chat.OnPizzaSendsReaction += EnqueuePizzaMessage;
         chat.OnChatFinish += FinishChat;

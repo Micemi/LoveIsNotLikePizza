@@ -58,7 +58,7 @@ public class Pizza
         Difficulty = difficulty;
         AvailableFlavors = availableFlavors;
         SetFlavors();
-        pizzasByState[state].Add(this);
+        PizzasByState[state].Add(this);
     }
 
     public Pizza(PizzaData pizzaData)
@@ -68,7 +68,7 @@ public class Pizza
         Difficulty = new Difficulty(pizzaData.Difficulty);
         AvailableFlavors = pizzaData.AvailableFlavors;
         SetFlavors();
-        pizzasByState[state].Add(this);
+        PizzasByState[state].Add(this);
     }
     
     private void SetFlavors()

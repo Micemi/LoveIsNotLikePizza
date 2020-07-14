@@ -28,5 +28,29 @@ namespace Tests
 
             Assert.That(pizza.Flavors.Count, Is.EqualTo(flavorsQuantity));
         }
+
+        [Test]
+        public void Pizza_Has_Starting_State_Pending()
+        {
+            Difficulty difficulty = new Difficulty {FlavorsQuantity = 4};
+            
+            Pizza pizza = new Pizza("Pizza", null, difficulty, TestsHelpers.AllFlavors);
+
+            Assert.That(pizza.State, Is.EqualTo(PizzaState.Pending));
+            Assert.That(Pizza.PizzasByState[PizzaState.Pending], Has.Member(pizza));
+        }
+
+        [Test]
+        public void Pizza_Can_Change_State()
+        {
+            Difficulty difficulty = new Difficulty {FlavorsQuantity = 4};
+            Pizza pizza = new Pizza("Pizza", null, difficulty, TestsHelpers.AllFlavors);
+
+            pizza.State = PizzaState.Chatted;
+
+            Assert.That(pizza.State, Is.EqualTo(PizzaState.Chatted));
+            Assert.That(Pizza.PizzasByState[PizzaState.Pending], Has.No.Member(pizza));
+            Assert.That(Pizza.PizzasByState[PizzaState.Chatted], Has.Member(pizza));
+        }
     }
 }

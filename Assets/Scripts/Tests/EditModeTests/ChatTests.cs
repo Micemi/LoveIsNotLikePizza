@@ -20,6 +20,9 @@ namespace Tests
             Assert.That(chat.State, Is.EqualTo(Chat.ChatState.WaitingForPizzaEmoji));
             Assert.That(chat.CurrentTime, Is.EqualTo(40f));
             Assert.That(chat.CurrentHotness, Is.EqualTo(0.5f));
+
+            Assert.That(chat.Pizza.State,  Is.Not.EqualTo(PizzaState.Chatted));
+            Assert.That(chat.Pizza.Points, Is.EqualTo(0));
         }
         
         [Test]
@@ -61,6 +64,9 @@ namespace Tests
 
             Assert.That(wasOnPizzaSendsReactionCalled, Is.False);
             Assert.That(reactionSent, Is.Null);
+
+            Assert.That(chat.Pizza.State,  Is.Not.EqualTo(PizzaState.Chatted));
+            Assert.That(chat.Pizza.Points, Is.EqualTo(0));
         }
         
         [Test]
@@ -102,6 +108,9 @@ namespace Tests
 
             Assert.That(wasOnPizzaSendsReactionCalled, Is.False);
             Assert.That(reactionSent, Is.Null);
+
+            Assert.That(chat.Pizza.State,  Is.Not.EqualTo(PizzaState.Chatted));
+            Assert.That(chat.Pizza.Points, Is.EqualTo(0));
         }
         
         [Test]
@@ -147,6 +156,9 @@ namespace Tests
             Assert.That(wasOnPizzaSendsReactionCalled, Is.True);
             Assert.That(reactionSent, Is.Not.Null);
             Assert.That(reactionSent.Category, Is.EqualTo(EmojiCategory.GoodReaction));
+
+            Assert.That(chat.Pizza.State,  Is.Not.EqualTo(PizzaState.Chatted));
+            Assert.That(chat.Pizza.Points, Is.EqualTo(0));
         }
         
         [Test]
@@ -192,6 +204,9 @@ namespace Tests
             Assert.That(wasOnPizzaSendsReactionCalled, Is.True);
             Assert.That(reactionSent, Is.Not.Null);
             Assert.That(reactionSent.Category, Is.EqualTo(EmojiCategory.BadReaction));
+
+            Assert.That(chat.Pizza.State,  Is.Not.EqualTo(PizzaState.Chatted));
+            Assert.That(chat.Pizza.Points, Is.EqualTo(0));
         }
 
         [Test]
@@ -235,6 +250,9 @@ namespace Tests
 
             Assert.That(wasOnPizzaSendsReactionCalled, Is.False);
             Assert.That(reactionSent, Is.Null);
+
+            Assert.That(chat.Pizza.State,  Is.Not.EqualTo(PizzaState.Chatted));
+            Assert.That(chat.Pizza.Points, Is.EqualTo(0));
         }
 
         [TestCase(0.00f,  1000f)]
@@ -278,6 +296,9 @@ namespace Tests
 
             Assert.That(wasOnChatFinishCalled, Is.True);
             Assert.That(finishPoints, Is.EqualTo(expectedPoints).Within(0.01f));
+
+            Assert.That(chat.Pizza.State, Is.EqualTo(PizzaState.Chatted));
+            Assert.That(chat.Pizza.Points, Is.EqualTo(expectedPoints));
         }
     }
 }
