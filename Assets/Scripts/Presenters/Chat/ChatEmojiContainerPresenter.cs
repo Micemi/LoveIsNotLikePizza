@@ -24,8 +24,8 @@ public class ChatEmojiContainerPresenter : MonoBehaviour
 
     private void Start()
     {
-        chat.Chat.OnPizzaSendsEmoji += _ => EnableEmojis();
-        chat.Chat.OnChatFinish      += _ => DisableEmojis();
+        chat.WaitingForPlayerEmoji +=      EnableEmojis;
+        chat.Chat.OnChatFinish     += _ => DisableEmojis();
     }
 
     private void EnableEmojis()

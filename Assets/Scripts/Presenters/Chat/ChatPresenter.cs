@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ChatPresenter : MonoBehaviour
@@ -22,23 +24,33 @@ public class ChatPresenter : MonoBehaviour
     [SerializeField]
     private MessagePresenter pizzaMessagePrefab;
 
+    [SerializeField]
+    private float timeBetweenMessages = 1f;
+
+    private readonly Queue<Message> messageQueue = new Queue<Message>();
+    private float timeUntilNextMessage = 1f;
 
     private Chat chat;
     public Chat Chat => chat;
 
     public float CurrentTime => chat.CurrentTime;
     public float CurrentHotness => chat.CurrentHotness;
+    
+    public Action WaitingForPlayerEmoji;
+    public bool wasWaitingForPlayerEmojiFired;
+    
     public void SendPlayerEmoji(Emoji emoji)
     {
-        InstantiatePlayerMessage(emoji);
+        wasWaitingForPlayerEmojiFired = false;
+        EnqueuePlayerMessage(emoji);
         chat.SendPlayerEmoji(emoji);
     }
 
     private void Awake()
     {
         chat = new Chat(new Pizza(pizzaData));
-        chat.OnPizzaSendsEmoji += InstantiatePizzaMessage;
-        chat.OnPizzaSendsReaction += InstantiatePizzaMessage;
+        chat.OnPizzaSendsEmoji += EnqueuePizzaMessage;
+        chat.OnPizzaSendsReaction += EnqueuePizzaMessage;
         chat.OnChatFinish += FinishChat;
     }
 
@@ -50,18 +62,42 @@ public class ChatPresenter : MonoBehaviour
     private void Update()
     {
         chat.Tick(Time.deltaTime);
+        MessageInstantiation();
     }
 
-    private void InstantiatePizzaMessage(Emoji emoji)
+    private void MessageInstantiation()
     {
-        MessagePresenter message = Instantiate(pizzaMessagePrefab, messageContainer);
-        message.SetMessage(emoji, chat.Pizza);
+        timeUntilNextMessage -= Time.deltaTime;
+
+        if (messageQueue.Count == 0)
+        {
+            if (!wasWaitingForPlayerEmojiFired && chat.State == Chat.ChatState.WaitingForPlayerEmoji)
+            {
+                WaitingForPlayerEmoji?.Invoke();
+                wasWaitingForPlayerEmojiFired = true;
+            }
+
+            return;
+        }
+
+        if (timeUntilNextMessage <= 0)
+        {
+            Message nextMessage = messageQueue.Dequeue();
+            InstantiateMessage(nextMessage);
+            timeUntilNextMessage = timeBetweenMessages;
+        }
     }
 
-    private void InstantiatePlayerMessage(Emoji emoji)
+    private void EnqueuePizzaMessage(Emoji emoji)  => EnqueueMessage(emoji, chat.Pizza);
+    private void EnqueuePlayerMessage(Emoji emoji) => EnqueueMessage(emoji, null);
+    private void EnqueueMessage(Emoji emoji, Pizza pizza) =>
+        messageQueue.Enqueue(new Message { Emoji = emoji, Author = pizza, IsPizzaMessage = pizza != null });
+
+    private void InstantiateMessage(Message message)
     {
-        MessagePresenter message = Instantiate(playerMessagePrefab, messageContainer);
-        message.SetMessage(emoji);
+        MessagePresenter messagePrefab = message.IsPizzaMessage ? pizzaMessagePrefab : playerMessagePrefab;
+        MessagePresenter messagePresenter = Instantiate(messagePrefab, messageContainer);
+        messagePresenter.SetMessage(message.Emoji, message.Author);
         messageScroller.verticalNormalizedPosition = 0; // scrolls to bottom
     }
 
