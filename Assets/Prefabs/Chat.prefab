@@ -263,13 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f3d38c23dfd0d941846014f96352d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pizzaData: {fileID: 11400000, guid: 5600ae2c7661d834999bef3bbff1491b, type: 2}
-  messageContainer: {fileID: 4932509147527502063}
-  messageScroller: {fileID: 4732342309571492563}
-  playerMessagePrefab: {fileID: 4670761065581791897, guid: 44e950ec1262270468bf51dac37ad53f,
-    type: 3}
-  pizzaMessagePrefab: {fileID: 2497114756500076611, guid: a45528b56cd32214ab8de5d82cbcc230,
-    type: 3}
+  messageContainer: {fileID: 2762765251668995514}
 --- !u!1 &1856209873636442547
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +898,7 @@ GameObject:
   - component: {fileID: 7998227667955763777}
   - component: {fileID: 7859289675857614902}
   - component: {fileID: 2424670381923035462}
+  - component: {fileID: 2762765251668995514}
   m_Layer: 5
   m_Name: MessagesContainer
   m_TagString: Untagged
@@ -977,6 +972,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6224556309582952820}
   m_CullTransparentMesh: 0
+--- !u!114 &2762765251668995514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6224556309582952820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef9176ac3dd5d44c8e59ab25498dfb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chat: {fileID: 1660545011570657159}
+  messageContainer: {fileID: 4932509147527502063}
+  messageScroller: {fileID: 4732342309571492563}
+  playerMessagePrefab: {fileID: 4670761065581791897, guid: 44e950ec1262270468bf51dac37ad53f,
+    type: 3}
+  pizzaMessagePrefab: {fileID: 2497114756500076611, guid: a45528b56cd32214ab8de5d82cbcc230,
+    type: 3}
+  timeBetweenMessages: 1
 --- !u!1 &6551396502001795295
 GameObject:
   m_ObjectHideFlags: 0

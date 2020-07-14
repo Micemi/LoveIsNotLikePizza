@@ -12,20 +12,25 @@ public class ChatEmojiContainerPresenter : MonoBehaviour
 
     private void OnEnable()
     {
+        chat.OnChatStarted           += Start;
+        chat.OnWaitingForPlayerEmoji += EnableEmojis;
+        chat.OnChatFinished          += DisableEmojis;
         for (int i = 0; i < emojiPresenters.Length; i++)
             emojiPresenters[i].OnEmojiClicked += ClickEmoji;
     }
 
     private void OnDisable()
-    {
+    {   
+        chat.OnChatStarted           -= Start;
+        chat.OnWaitingForPlayerEmoji -= EnableEmojis;
+        chat.OnChatFinished          -= DisableEmojis;
         for (int i = 0; i < emojiPresenters.Length; i++)
             emojiPresenters[i].OnEmojiClicked -= ClickEmoji;
     }
 
     private void Start()
     {
-        chat.WaitingForPlayerEmoji +=      EnableEmojis;
-        chat.Chat.OnChatFinish     += _ => DisableEmojis();
+        DisableEmojis();
     }
 
     private void EnableEmojis()

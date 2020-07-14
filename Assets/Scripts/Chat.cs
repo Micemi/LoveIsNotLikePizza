@@ -104,7 +104,9 @@ public class Chat
     private void EndChat()
     {
         float points = ChatPoints.GetPoints(CurrentHotness);
+        Pizza.Points = points;
         OnChatFinish?.Invoke(points);
+        Pizza.State = PizzaState.Chatted;
         state = ChatState.Finished;
     }
 
