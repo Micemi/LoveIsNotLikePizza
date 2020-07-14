@@ -28,14 +28,19 @@ public class ChatPresenter : MonoBehaviour
     private Chat chat;
     public Chat Chat => chat;
 
+    private bool chatRunning;
+    public bool ChatRunning => chatRunning;
+
     private Pizza pizza;
 
     public float CurrentTime => chat.CurrentTime;
     public float CurrentHotness => chat.CurrentHotness;
-    
-    public Action WaitingForPlayerEmoji;
+
+    public Action OnChatStarted = delegate {  };
+    public Action WaitingForPlayerEmoji = delegate {  };
     public bool wasWaitingForPlayerEmojiFired;
-    
+    public Action OnChatFinished = delegate {  };
+
     public void SendPlayerEmoji(Emoji emoji)
     {
         wasWaitingForPlayerEmojiFired = false;
@@ -43,24 +48,32 @@ public class ChatPresenter : MonoBehaviour
         chat.SendPlayerEmoji(emoji);
     }
 
-    private void Awake()
+    [ContextMenu("StartChatWithRandomPizza")]
+    public void StartChatWithRandomPizza() => StartChat(Game.Current.RemainingPizzas.GetRandom());
+    public void StartChat(Pizza pizza)
     {
-        pizza = Game.Current.RemainingPizzas.GetRandom();
-        
-        // TODO: no sacar una pizza random, sacar la pizza que me pasó el Swiper
-        chat = new Chat(pizza);
-        chat.OnPizzaSendsEmoji += EnqueuePizzaMessage;
+        this.pizza = pizza;
+        chat                      =  new Chat(pizza);
+        chat.OnPizzaSendsEmoji    += EnqueuePizzaMessage;
         chat.OnPizzaSendsReaction += EnqueuePizzaMessage;
-        chat.OnChatFinish += FinishChat;
+        chat.OnChatFinish         += FinishChat;
+        ClearMessages();
+        OnChatStarted.Invoke();
+        chat.Start();
+        chatRunning = true;
     }
 
-    private void Start()
+    private void ClearMessages()
     {
-        chat.Start();
+        messageQueue.Clear();
+        foreach (Transform child in messageContainer)
+            Destroy(child.gameObject);
     }
 
     private void Update()
     {
+        if (!chatRunning) return;
+
         chat.Tick(Time.deltaTime);
         MessageInstantiation();
     }
@@ -73,7 +86,7 @@ public class ChatPresenter : MonoBehaviour
         {
             if (!wasWaitingForPlayerEmojiFired && chat.State == Chat.ChatState.WaitingForPlayerEmoji)
             {
-                WaitingForPlayerEmoji?.Invoke();
+                WaitingForPlayerEmoji.Invoke();
                 wasWaitingForPlayerEmojiFired = true;
             }
 
@@ -103,6 +116,8 @@ public class ChatPresenter : MonoBehaviour
 
     private void FinishChat(float points)
     {
+        chatRunning = false;
+        OnChatFinished.Invoke();
         // Acá de alguna forma hay que pasarle estos puntos a una pantalla de éxito
         Debug.Log($"Yay! You got {points} points!");
     }
