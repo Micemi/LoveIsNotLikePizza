@@ -22,10 +22,14 @@ public class MessageContainerPresenter : MonoBehaviour
     private MessagePresenter pizzaMessagePrefab;
 
     [SerializeField]
+    private MessagePresenter pizzaReactionPrefab;
+
+    [SerializeField]
     private float timeBetweenMessages = 1f;
 
     private readonly Queue<Message> messageQueue = new Queue<Message>();
     private float timeUntilNextMessage = 1f;
+    private Dictionary<MessageType, MessagePresenter> messagePrefabByType;
 
     private bool wasWaitingForPlayerEmojiFired;
 
@@ -45,7 +49,17 @@ public class MessageContainerPresenter : MonoBehaviour
         foreach (Transform child in messageContainer)
             Destroy(child.gameObject);
     }
-    
+
+    private void Awake()
+    {
+        messagePrefabByType = new Dictionary<MessageType, MessagePresenter>
+        {
+            [MessageType.Player] = playerMessagePrefab,
+            [MessageType.PizzaEmoji] = pizzaMessagePrefab,
+            [MessageType.PizzaReaction] = pizzaReactionPrefab
+        };
+    }
+
     private void Update()
     {
         if (!chat.ChatRunning) return;
@@ -73,21 +87,21 @@ public class MessageContainerPresenter : MonoBehaviour
     
     private void InstantiateMessage(Message message)
     {
-        MessagePresenter messagePrefab = message.IsPizzaMessage ? pizzaMessagePrefab : playerMessagePrefab;
-        MessagePresenter messagePresenter = Instantiate(messagePrefab, messageContainer);
+        MessagePresenter messagePresenter = Instantiate(messagePrefabByType[message.Type], messageContainer);
         messagePresenter.SetMessage(message.Emoji, message.Author);
         messageScroller.verticalNormalizedPosition = 0; // scrolls to bottom
     }
     
-    public void EnqueuePizzaMessage(Emoji emoji)  => EnqueueMessage(emoji, chat.Pizza);
+    public void EnqueuePizzaMessage(Emoji emoji)  => EnqueueMessage(emoji, chat.Pizza, MessageType.PizzaEmoji);
+    public void EnqueuePizzaReaction(Emoji emoji)  => EnqueueMessage(emoji, chat.Pizza, MessageType.PizzaReaction);
 
     public void EnqueuePlayerMessage(Emoji emoji)
     {
         wasWaitingForPlayerEmojiFired = false;
-        EnqueueMessage(emoji, null);
+        EnqueueMessage(emoji, null, MessageType.Player);
     }
 
-    private void EnqueueMessage(Emoji emoji, Pizza pizza) =>
-        messageQueue.Enqueue(new Message { Emoji = emoji, Author = pizza, IsPizzaMessage = pizza != null });
+    private void EnqueueMessage(Emoji emoji, Pizza pizza, MessageType type) =>
+        messageQueue.Enqueue(new Message { Emoji = emoji, Author = pizza, Type = type});
 
 }

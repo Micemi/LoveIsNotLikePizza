@@ -43,7 +43,7 @@ public class ChatPresenter : MonoBehaviour
     {
         if (chat == null) return;
         chat.OnPizzaSendsEmoji    += messageContainer.EnqueuePizzaMessage;
-        chat.OnPizzaSendsReaction += messageContainer.EnqueuePizzaMessage;
+        chat.OnPizzaSendsReaction += messageContainer.EnqueuePizzaReaction;
         chat.OnChatFinish         += FinishChat;
     }
 
@@ -51,7 +51,7 @@ public class ChatPresenter : MonoBehaviour
     {
         if (chat == null) return;
         chat.OnPizzaSendsEmoji    -= messageContainer.EnqueuePizzaMessage;
-        chat.OnPizzaSendsReaction -= messageContainer.EnqueuePizzaMessage;
+        chat.OnPizzaSendsReaction -= messageContainer.EnqueuePizzaReaction;
         chat.OnChatFinish         -= FinishChat;
     }
 

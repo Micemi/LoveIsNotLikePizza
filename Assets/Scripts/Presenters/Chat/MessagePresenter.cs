@@ -13,6 +13,9 @@ public class MessagePresenter : MonoBehaviour
     private Image emojiImage;
 
     [SerializeField]
+    private Image secondEmojiImage;
+
+    [SerializeField]
     private TextMeshProUGUI timeText;
 
     public void SetMessage(Emoji emoji, Pizza pizza = null)
@@ -26,10 +29,11 @@ public class MessagePresenter : MonoBehaviour
         }
 
         if (timeText != null)
-        {
             timeText.text = DateTime.Now.ToString("h:mm tt", CultureInfo.InvariantCulture);
-        }
 
         emojiImage.sprite = emoji?.Image;
+
+        if (secondEmojiImage != null)
+            secondEmojiImage.sprite = new Emoji(EmojiData.EmojisByFlavor[emoji.Flavor].GetRandom()).Image;
     }
 }

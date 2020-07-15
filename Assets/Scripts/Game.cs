@@ -11,11 +11,13 @@ public class Game
         return current;
     }
 
+    public List<Pizza> AllPizzas => Pizza.Pizzas;
     public List<Pizza> RemainingPizzas => Pizza.PizzasByState[PizzaState.Pending];
+    public List<Pizza> ChattedWithPizzas => Pizza.PizzasByState[PizzaState.Chatted];
 
-    public Game()
+    private Game()
     {
-        Pizza.ClearPizzasByState();
+        Pizza.ClearPizzasCollections();
         for (int i = 0; i < PizzaData.Pizzas.Count; i++)
         {
             // While we don't use this, by instancing a Pizza it gets
