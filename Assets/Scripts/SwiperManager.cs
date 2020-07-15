@@ -7,9 +7,11 @@ using System;
 public class SwiperManager : MonoBehaviour
 {
 
-    ///////////////
-    //Boton de NO//
-    ///////////////
+    /*
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            Este script controla bastantes cosas de la escena del swiper
+    |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    */
 
     float speed = 0f;
     public Rigidbody2D rb2d;
@@ -21,15 +23,21 @@ public class SwiperManager : MonoBehaviour
   
     void Start()
     {
+        Pizza unaPizzaRandom = Game.Current.RemainingPizzas.GetRandom();
+        Debug.Log("obtuviste: " + unaPizzaRandom);
         
+        gameObject.GetComponent<Image>().sprite = unaPizzaRandom.Image;
+
         YesBtn.interactable = false;
         NoBtn.interactable = false;
         ProfileBtn.interactable = false;
 
+        // Escucha si los eventos son disparados y activa cositas UwU
         SwiperManagerBtn.event_btn += BtnActivation;
         SwiperManagerBtn.event_NoBtn += Start;
     }
 
+    //solamente lo uso con Rigidbody2D para mover el perfil.
     void FixedUpdate() {
         
         
@@ -44,7 +52,9 @@ public class SwiperManager : MonoBehaviour
         
         Debug.Log("Rechasao");
 
-        Destroy(gameObject, 5);
+        //en un futuro muy cercano hay que cambiar el destroy por un cambio de estado a los perfiles de las pizzas
+
+        Destroy(rb2d.gameObject, 5);
 
         SwiperManagerBtn.event_NoBtn();
 
@@ -57,6 +67,7 @@ public class SwiperManager : MonoBehaviour
     public void BtnActivation()
     {
 
+        // esto practicamente es lo que activa el evento event_btn. En resumen habilita los botones
         if (YesBtn)
         {
             YesBtn.interactable = true;
@@ -78,11 +89,20 @@ public class SwiperManager : MonoBehaviour
 
 
 }
+// esta es otra clase donde cree los eventos
 public static class SwiperManagerBtn
 {
 
     public static Action event_btn;
     public static Action event_NoBtn;
+    public static Action event_Pizza;
 
 }
 
+public class ImageProfileChanger : MonoBehaviour
+{
+
+    
+
+
+}
