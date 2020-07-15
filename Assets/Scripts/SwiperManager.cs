@@ -19,14 +19,18 @@ public class SwiperManager : MonoBehaviour
     public Button NoBtn;
     public Button ProfileBtn;
 
+    public Image AvatarPizzaProfile;
+
     
   
     void Start()
     {
-        Pizza unaPizzaRandom = Game.Current.RemainingPizzas.GetRandom();
-        Debug.Log("obtuviste: " + unaPizzaRandom);
         
-        gameObject.GetComponent<Image>().sprite = unaPizzaRandom.Image;
+        Pizza unaPizzaRandom = Game.Current.RemainingPizzas.GetRandom();
+        Debug.Log("obtuviste: " + unaPizzaRandom.Name);
+        
+       AvatarPizzaProfile.sprite = unaPizzaRandom.Image;
+    
 
         YesBtn.interactable = false;
         NoBtn.interactable = false;
@@ -35,6 +39,7 @@ public class SwiperManager : MonoBehaviour
         // Escucha si los eventos son disparados y activa cositas UwU
         SwiperManagerBtn.event_btn += BtnActivation;
         SwiperManagerBtn.event_NoBtn += Start;
+
     }
 
     //solamente lo uso con Rigidbody2D para mover el perfil.
