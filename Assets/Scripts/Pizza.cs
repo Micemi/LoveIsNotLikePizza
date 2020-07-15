@@ -9,13 +9,25 @@ public class Pizza
         get
         {
             if (pizzasByState == null)
-                ClearPizzasByState();
+                ClearPizzasCollections();
 
             return pizzasByState;
         }
     }
-    public static void ClearPizzasByState()
+    private static List<Pizza> pizzas;
+    public static List<Pizza> Pizzas
     {
+        get
+        {
+            if (pizzas == null)
+                ClearPizzasCollections();
+
+            return pizzas;
+        }
+    }
+    public static void ClearPizzasCollections()
+    {
+        pizzas = new List<Pizza>();
         pizzasByState = new Dictionary<PizzaState, List<Pizza>>
         {
             [PizzaState.Pending]  = new List<Pizza>(),
@@ -58,6 +70,7 @@ public class Pizza
         Difficulty = difficulty;
         AvailableFlavors = availableFlavors;
         SetFlavors();
+        Pizzas.Add(this);
         PizzasByState[state].Add(this);
     }
 
@@ -68,6 +81,7 @@ public class Pizza
         Difficulty = new Difficulty(pizzaData.Difficulty);
         AvailableFlavors = pizzaData.AvailableFlavors;
         SetFlavors();
+        Pizzas.Add(this);
         PizzasByState[state].Add(this);
     }
     
