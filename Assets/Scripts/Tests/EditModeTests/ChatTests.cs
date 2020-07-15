@@ -8,6 +8,14 @@ namespace Tests
 {
     public class ChatTests
     {
+        private DifficultyData[] difficulties;
+
+        [OneTimeSetUp]
+        public void OneTimeSetUp()
+        {
+            difficulties = Resources.LoadAll<DifficultyData>("Data/Difficulties");
+        }
+        
         [Test]
         public void Chat_Initial_Status()
         {
@@ -255,12 +263,12 @@ namespace Tests
             Assert.That(chat.Pizza.Points, Is.EqualTo(0));
         }
 
-        [TestCase(0.00f,  1000f)]
-        [TestCase(0.39f,  1000f)]
-        [TestCase(0.40f,  5000f)]
-        [TestCase(0.69f,  5000f)]
-        [TestCase(0.70f,  7000f)]
-        [TestCase(0.94f,  7000f)]
+        [TestCase(0.00f,  2000f)]
+        [TestCase(0.39f,  2000f)]
+        [TestCase(0.40f,  6000f)]
+        [TestCase(0.69f,  6000f)]
+        [TestCase(0.70f,  8000f)]
+        [TestCase(0.94f,  8000f)]
         [TestCase(0.95f, 10000f)]
         [TestCase(1.00f, 10000f)]
         public void Chat_Finishes_When_Out_Of_Time(float finishHotness, float expectedPoints)
@@ -268,7 +276,10 @@ namespace Tests
             // Arrange
             float deltaHotness = finishHotness - 0.5f;
             
-            Difficulty difficulty = new Difficulty {FlavorsQuantity = 4, InitialTime = 40f, CoolingPerSec = 0f, HotnessBonus = deltaHotness};
+            Difficulty difficulty = new Difficulty(difficulties[3])
+            {
+                FlavorsQuantity = 4, CoolingPerSec = 0f, HotnessBonus = deltaHotness,
+            };
             Pizza pizza = new Pizza("Pizza", null, difficulty, TestsHelpers.AllFlavors);
             Chat chat = new Chat(pizza);
             chat.Start();
