@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654ee54c6b2ad394cbb25201d0882a8d, type: 3}
+  m_Name: ReputazzioneSettings
+  m_EditorClassIdentifier: 
+  pointConversions:
+  - PointsUpperLimit: 8000
+    Title: Deshonor
+  - PointsUpperLimit: 15000
+    Title: Weon to feo
+  - PointsUpperLimit: 30000
+    Title: Mmmm
+  - PointsUpperLimit: 50000
+    Title: Normal
+  - PointsUpperLimit: 70000
+    Title: Rico
+  - PointsUpperLimit: 79000
+    Title: Mamado
+  - PointsUpperLimit: 80000
+    Title: "San Mart\xEDn"
