@@ -11,6 +11,11 @@ public class ProfileLerp : MonoBehaviour
 
     public Vector2 endPosition;
     public Vector2 startPosition;
+ 
+    public Transform ProfileStart;
+    public Transform ProfileEnd;
+
+    
 
     private void StartLerping()
     {
@@ -39,6 +44,7 @@ public class ProfileLerp : MonoBehaviour
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
 
         shouldLerp = false;
+        SwiperManagerBtn.event_btn();
     }
 
     // Update is called once per frame
@@ -46,7 +52,7 @@ public class ProfileLerp : MonoBehaviour
     {
         if (shouldLerp)
         {
-            transform.position = Lerp(startPosition, endPosition, timeStartedLerping, lerpTime);
+            transform.position = Lerp(ProfileStart.position,ProfileEnd.position, timeStartedLerping, lerpTime);
         }
        
 
