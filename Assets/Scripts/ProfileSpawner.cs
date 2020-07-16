@@ -7,22 +7,35 @@ public class ProfileSpawner : MonoBehaviour
 {
     
     public GameObject Prefab;
-    
+    public Transform CanvasTransform;
+
+
     void Start()
     {
-        Instantiate (Prefab, transform.position, transform.rotation);
-        WhenSpawn.EventWhenSpawn += spawnprefab;
+
+        spawnprefab();
+
+        WhenSpawn.EventRechaso += spawnprefab;
+        
     }
 
     public void spawnprefab()
     {
-        Instantiate (Prefab, transform.position, transform.rotation);
+        GameObject elcositoquespawnee;
+
+        elcositoquespawnee = Instantiate (Prefab, CanvasTransform);
+
+
+        WhenSpawn.EventSpawn(elcositoquespawnee.transform);
+    
     }
 
 }
 public static class WhenSpawn
 {
     
-    public static Action EventWhenSpawn;
+    public static Action EventRechaso;
+
+    public static Action<Transform> EventSpawn;
 
 }

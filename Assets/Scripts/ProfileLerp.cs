@@ -15,22 +15,24 @@ public class ProfileLerp : MonoBehaviour
     public Transform ProfileStart;
     public Transform ProfileEnd;
 
-    public GameObject WhatLerp;
+    public Transform WhatMove;
 
-    private void StartLerping()
+    private void StartLerping(Transform Whatmove)
     {
         timeStartedLerping = Time.time;
 
         shouldLerp = true;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartLerping(); 
-
+        WhatMove = Whatmove;
+        
         //Start the coroutine we define below named ExampleCoroutine.
         StartCoroutine(ExampleCoroutine());   
+    }
+
+    // Start is called before the first frame update (.)Y(.)
+    void Awake()
+    {
+        WhenSpawn.EventSpawn += StartLerping; 
+
     }
     IEnumerator ExampleCoroutine()
     {
@@ -54,7 +56,7 @@ public class ProfileLerp : MonoBehaviour
     {
         if (shouldLerp)
         {
-            transform.position = Lerp(ProfileStart.position,ProfileEnd.position, timeStartedLerping, lerpTime);
+           WhatMove.position = Lerp(ProfileStart.position,ProfileEnd.position, timeStartedLerping, lerpTime);
         }
        
 
@@ -71,4 +73,11 @@ public class ProfileLerp : MonoBehaviour
         return result;
 
     }
+    public void DOOOOU()
+    {
+    
+
+
+    }
+
 }

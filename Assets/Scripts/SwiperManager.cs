@@ -19,19 +19,14 @@ public class SwiperManager : MonoBehaviour
     public Button NoBtn;
     public Button ProfileBtn;
 
-    public Image AvatarPizzaProfile;
+    
 
     
   
     void Start()
     {
         
-        Pizza unaPizzaRandom = Game.Current.RemainingPizzas.GetRandom();
-        Debug.Log("obtuviste: " + unaPizzaRandom.Name);
         
-        AvatarPizzaProfile.sprite = unaPizzaRandom.Image;
-
-
         YesBtn.interactable = false;
         NoBtn.interactable = false;
         ProfileBtn.interactable = false;
@@ -61,9 +56,9 @@ public class SwiperManager : MonoBehaviour
 
         Destroy(rb2d.gameObject, 5);
         
-        WhenSpawn.EventWhenSpawn();
+        WhenSpawn.EventRechaso();
         SwiperManagerBtn.event_NoBtn();
-        
+
 
     }
     public void BtnActivation()
