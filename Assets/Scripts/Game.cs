@@ -14,6 +14,7 @@ public class Game
     public List<Pizza> AllPizzas => Pizza.Pizzas;
     public List<Pizza> RemainingPizzas => Pizza.PizzasByState[PizzaState.Pending];
     public List<Pizza> ChattedWithPizzas => Pizza.PizzasByState[PizzaState.Chatted];
+    public List<Pizza> MatchedPizzas => Pizza.PizzasByState[PizzaState.Matched];
 
     private Game()
     {
