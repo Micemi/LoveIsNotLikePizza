@@ -19,3 +19,12 @@ MonoBehaviour:
   HotnessBonus: 0.2
   HotnessPenalty: 0.05
   CoolingPerSec: 0.01
+  pointConversions:
+  - UpperLimit: 0.4
+    Points: 500
+  - UpperLimit: 0.7
+    Points: 2000
+  - UpperLimit: 0.95
+    Points: 4000
+  - UpperLimit: 1
+    Points: 6000
