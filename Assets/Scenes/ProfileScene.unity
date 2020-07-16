@@ -381,6 +381,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4462900296254102139, guid: d4c48d383283a674fa71e2cf4e24b65f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000061035156
+      objectReference: {fileID: 0}
     - target: {fileID: 4510651474453101553, guid: d4c48d383283a674fa71e2cf4e24b65f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -414,7 +419,7 @@ PrefabInstance:
     - target: {fileID: 5975492943937498956, guid: d4c48d383283a674fa71e2cf4e24b65f,
         type: 3}
       propertyPath: m_Name
-      value: PointsSummary
+      value: Profile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4c48d383283a674fa71e2cf4e24b65f, type: 3}
