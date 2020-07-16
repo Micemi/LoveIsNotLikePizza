@@ -17,8 +17,8 @@ MonoBehaviour:
   InitialTime: 40
   TimePenalty: 6
   HotnessBonus: 0.3
-  HotnessPenalty: 0.15
-  CoolingPerSec: 0.03
+  HotnessPenalty: 0.2
+  CoolingPerSec: 0.05
   pointConversions:
   - UpperLimit: 0.4
     Points: 2000
