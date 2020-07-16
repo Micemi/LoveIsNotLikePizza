@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265e3d09cedcfef4d8e42470cddbb136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: -34000
   rb2d: {fileID: 5390015548148813410, guid: 6876181df8557d644ae3293d0cce4918, type: 3}
   YesBtn: {fileID: 815794201}
   NoBtn: {fileID: 1175413368}
@@ -694,6 +695,17 @@ MonoBehaviour:
       - m_Target: {fileID: 6465913}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 707408998}
+        m_MethodName: aceptacion
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1987,5 +1999,11 @@ PrefabInstance:
       propertyPath: CanvasTransform
       value: 
       objectReference: {fileID: 1917826569}
+    - target: {fileID: 6908020239703016794, guid: 308e0c46c6f553940b8e6a245eb11062,
+        type: 3}
+      propertyPath: PrefabRb2d
+      value: 
+      objectReference: {fileID: 5390015548148813410, guid: 6876181df8557d644ae3293d0cce4918,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 308e0c46c6f553940b8e6a245eb11062, type: 3}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class SwiperManager : MonoBehaviour
 {
@@ -113,6 +114,15 @@ public class SwiperManager : MonoBehaviour
         rb2d = rb2dpref;
 
         PizzaPedida = unaPizzaran;
+    }
+    public void aceptacion()
+    {
+
+
+        PizzaPedida.State = PizzaState.Matched;
+
+        SceneManager.LoadScene ("ChatScene");
+        
     }
 
 
