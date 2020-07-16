@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e90fcd0592c34653b647c1a25d882bc0, type: 3}
-  m_Name: Monstruito
+  m_Name: Serpiente
   m_EditorClassIdentifier: 
-  Name: Monstruito
-  Image: {fileID: 21300000, guid: c1c049ce370099b46ab43d504f55f97d, type: 3}
-  Flavor: 4
+  Name: Serpiente
+  Image: {fileID: 21300000, guid: c1b792b44d290a54eb7bb0957a1c3148, type: 3}
+  Flavor: 3
   Category: 0
