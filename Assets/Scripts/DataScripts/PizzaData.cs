@@ -29,6 +29,7 @@ public class PizzaData : ScriptableObject
     #endregion
 
     public string Name;
+    [TextArea] public string Description;
     public Sprite Image;
     public DifficultyData Difficulty;
     [Tooltip("Son los flavors disponibles para que la pizza randomice. No puede ser menor que la cantidad de la dificultad. " +

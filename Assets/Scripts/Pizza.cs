@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Pizza
 {
+    #region Static Stuff
+
     private static Dictionary<PizzaState, List<Pizza>> pizzasByState;
     public static Dictionary<PizzaState, List<Pizza>> PizzasByState
     {
@@ -37,8 +39,11 @@ public class Pizza
         };
     }
 
+    #endregion
+
 
     public string Name;
+    public string Description;
     public Sprite Image;
     public Difficulty Difficulty;
     [Tooltip("Son los flavors disponibles para que la pizza randomice. No puede ser menor que la cantidad de la dificultad. " +
@@ -77,6 +82,7 @@ public class Pizza
     public Pizza(PizzaData pizzaData)
     {
         Name = pizzaData.Name;
+        Description = pizzaData.Description;
         Image = pizzaData.Image;
         Difficulty = new Difficulty(pizzaData.Difficulty);
         AvailableFlavors = pizzaData.AvailableFlavors;
