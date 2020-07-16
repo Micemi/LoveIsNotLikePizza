@@ -29,8 +29,8 @@ public class SwiperManager : MonoBehaviour
         Pizza unaPizzaRandom = Game.Current.RemainingPizzas.GetRandom();
         Debug.Log("obtuviste: " + unaPizzaRandom.Name);
         
-       AvatarPizzaProfile.sprite = unaPizzaRandom.Image;
-    
+        AvatarPizzaProfile.sprite = unaPizzaRandom.Image;
+
 
         YesBtn.interactable = false;
         NoBtn.interactable = false;
@@ -38,8 +38,8 @@ public class SwiperManager : MonoBehaviour
 
         // Escucha si los eventos son disparados y activa cositas UwU
         SwiperManagerBtn.event_btn += BtnActivation;
-        SwiperManagerBtn.event_NoBtn += Start;
-
+        SwiperManagerBtn.event_NoBtn += RechazoBtn;
+        
     }
 
     //solamente lo uso con Rigidbody2D para mover el perfil.
@@ -60,13 +60,10 @@ public class SwiperManager : MonoBehaviour
         //en un futuro muy cercano hay que cambiar el destroy por un cambio de estado a los perfiles de las pizzas
 
         Destroy(rb2d.gameObject, 5);
-
+        
+        WhenSpawn.EventWhenSpawn();
         SwiperManagerBtn.event_NoBtn();
-
-
-
-
-
+        
 
     }
     public void BtnActivation()
@@ -91,6 +88,12 @@ public class SwiperManager : MonoBehaviour
         
 
     }
+    public void RechazoBtn()
+    {
+        YesBtn.interactable = false;
+        NoBtn.interactable = false;
+        ProfileBtn.interactable = false;
+    }
 
 
 }
@@ -101,13 +104,7 @@ public static class SwiperManagerBtn
     public static Action event_btn;
     public static Action event_NoBtn;
     public static Action event_Pizza;
-
-}
-
-public class ImageProfileChanger : MonoBehaviour
-{
-
     
 
-
 }
+
