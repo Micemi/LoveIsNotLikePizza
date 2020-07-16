@@ -22,11 +22,19 @@ public class ProfileSpawner : MonoBehaviour
 
     public void spawnprefab()
     {
+       if ( Game.Current.RemainingPizzas.Count == 0)
+
+        {
+            Debug.Log("No hay mas pizzas xd");
+        }
+        else
+        {
 
         GameObject elcositoquespawnee;
 
-        elcositoquespawnee = Instantiate (Prefab, CanvasTransform);
-
+        elcositoquespawnee = Instantiate (Prefab,transform.position,transform.rotation, CanvasTransform);
+        
+        }
 
     }
 
