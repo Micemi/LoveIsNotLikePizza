@@ -25,6 +25,10 @@ public class MainMenu : MonoBehaviour {
         Debug.Log("Opened Settings Menu");
         //  (si, solo hace un log, el resto de acciones están en unity)
     }
+    public void DisplayInfo(){
+        Debug.Log("DontForget to make info window!");
+    }
+    
     public void Exit(){
         Debug.Log("GAME CLOSED");
         Application.Quit(); 

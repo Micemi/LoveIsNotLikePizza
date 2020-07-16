@@ -7,7 +7,7 @@ public class ChangeFire : MonoBehaviour {
     private Sprite[] firesType;
     private Image fireComponent;
 
-    private void Start() {
+    private void Awake() {
         fireComponent = GetComponent<Image>();
         //  StartCoroutine(TestCoroutine());
     }
@@ -16,6 +16,8 @@ public class ChangeFire : MonoBehaviour {
         fireComponent.sprite = firesType[0];
     }
     public void GoWarm(){
+        Debug.Log("Warm log1");
+        Debug.Log(fireComponent);
         fireComponent.sprite = firesType[1];
     }
     public void GoHOTTT(){

@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 1ecc9c61642425844ac513351463761f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4489740827127162190
+    second: vertical_thermometer_outside
+  - first:
+      213: 514179432283718445
+    second: vertical_thermometer_inside
+  - first:
+      213: 9058436207786845691
+    second: thermometer_fire_0
+  - first:
+      213: 5228320756597304612
+    second: thermometer_fire_1
+  - first:
+      213: -2407800488769439933
+    second: thermometer_fire_2
+  - first:
+      213: -7877285328612838551
+    second: chat_message_0
+  - first:
+      213: 4912569039453225643
+    second: chat_message_1
+  - first:
+      213: -746036651189238281
+    second: chat_message_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -95,9 +119,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: vertical_thermometer_outside
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 280
+        width: 336
+        height: 3177
+      alignment: 9
+      pivot: {x: 0.43764442, y: 0.5303236}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba5481618c31b1c0800000000000000
+      internalID: -4489740827127162190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vertical_thermometer_inside
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 629
+        width: 161
+        height: 2883
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23451c287bb22700800000000000000
+      internalID: 514179432283718445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thermometer_fire_0
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 3289
+        width: 438
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5eba1ccb706bd70800000000000000
+      internalID: 9058436207786845691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thermometer_fire_1
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 3289
+        width: 438
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42da8ccf60abe8840800000000000000
+      internalID: 5228320756597304612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thermometer_fire_2
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 3288
+        width: 438
+        height: 469
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347b2e86636c59ed0800000000000000
+      internalID: -2407800488769439933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chat_message_0
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 3164
+        width: 1048
+        height: 422
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963b2a1bab24ea290800000000000000
+      internalID: -7877285328612838551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chat_message_1
+      rect:
+        serializedVersion: 2
+        x: 3547
+        y: 2453
+        width: 950
+        height: 500
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba201337383fc2440800000000000000
+      internalID: 4912569039453225643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chat_message_2
+      rect:
+        serializedVersion: 2
+        x: 4837
+        y: 3156
+        width: 1301
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f581705e9b85a5f0800000000000000
+      internalID: -746036651189238281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
