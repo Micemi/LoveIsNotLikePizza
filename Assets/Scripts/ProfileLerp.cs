@@ -15,7 +15,7 @@ public class ProfileLerp : MonoBehaviour
     public Transform ProfileStart;
     public Transform ProfileEnd;
 
-    
+    public GameObject WhatLerp;
 
     private void StartLerping()
     {
@@ -44,7 +44,9 @@ public class ProfileLerp : MonoBehaviour
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
 
         shouldLerp = false;
+
         SwiperManagerBtn.event_btn();
+        Debug.Log("DOOOU?");
     }
 
     // Update is called once per frame
@@ -67,5 +69,6 @@ public class ProfileLerp : MonoBehaviour
         var result = Vector3.Lerp(start, end, percentageComplete);
 
         return result;
+
     }
 }
