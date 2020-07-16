@@ -22,6 +22,10 @@ public class ChatPresenter : MonoBehaviour
     public Action OnWaitingForPlayerEmoji = delegate {  };
     public Action OnChatFinished = delegate {  };
 
+    private void Start()
+    {
+        StartChat(); //Deberia funcionar dicen las malas lenguaaaaaas
+    }
     private void OnEnable()
     {
         SubscribeToChat();
@@ -55,11 +59,10 @@ public class ChatPresenter : MonoBehaviour
         chat.OnChatFinish         -= FinishChat;
     }
 
-    [ContextMenu("StartChatWithRandomPizza")]
-    public void StartChatWithRandomPizza() => StartChat(Game.Current.RemainingPizzas.GetRandom());
-    public void StartChat(Pizza pizza)
+    
+    public void StartChat()
     {
-        this.pizza = pizza;
+        pizza = Game.Current.MatchedPizzas[0];
         chat = new Chat(pizza);
         SubscribeToChat();
         OnChatStarted.Invoke();
