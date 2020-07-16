@@ -18,6 +18,7 @@ public class SwiperManager : MonoBehaviour
     public Button YesBtn;
     public Button NoBtn;
     public Button ProfileBtn;
+    private Pizza PizzaPedida;
 
     void Awake()
     {
@@ -63,6 +64,9 @@ public class SwiperManager : MonoBehaviour
         //en un futuro muy cercano hay que cambiar el destroy por un cambio de estado a los perfiles de las pizzas
 
         //cambio de estado "pedida" 
+
+        PizzaPedida.State = PizzaState.Rejected;
+
         Destroy(rb2d.gameObject, 5);
         
         WhenSpawn.EventRechaso();
@@ -103,11 +107,12 @@ public class SwiperManager : MonoBehaviour
     }
 
     
-    public void rb2dchanger (Rigidbody2D rb2dpref)
+    public void rb2dchanger (Rigidbody2D rb2dpref, Pizza unaPizzaran)
     {
 
         rb2d = rb2dpref;
 
+        PizzaPedida = unaPizzaran;
     }
 
 

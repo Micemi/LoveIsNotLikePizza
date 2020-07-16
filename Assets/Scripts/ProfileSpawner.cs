@@ -28,13 +28,6 @@ public class ProfileSpawner : MonoBehaviour
         elcositoquespawnee = Instantiate (Prefab, CanvasTransform);
 
 
-        WhenSpawn.EventSpawn(elcositoquespawnee.transform);
-        
-        Rigidbody2D rb2dprefab;
-
-        rb2dprefab = elcositoquespawnee.GetComponent<Rigidbody2D>();
-
-        WhenSpawn.EventSpawnRb2d(rb2dprefab);
     }
 
 }
@@ -45,7 +38,7 @@ public static class WhenSpawn
 
     public static Action<Transform> EventSpawn;
 
-    public static Action<Rigidbody2D> EventSpawnRb2d;
+    public static Action<Rigidbody2D,Pizza> EventSpawnRb2d;
 
 
 
