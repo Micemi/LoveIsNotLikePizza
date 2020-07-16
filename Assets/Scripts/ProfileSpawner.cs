@@ -8,6 +8,7 @@ public class ProfileSpawner : MonoBehaviour
     
     public GameObject Prefab;
     public Transform CanvasTransform;
+    
 
 
     void Start()
@@ -21,13 +22,20 @@ public class ProfileSpawner : MonoBehaviour
 
     public void spawnprefab()
     {
+       if ( Game.Current.RemainingPizzas.Count == 0)
+
+        {
+            Debug.Log("No hay mas pizzas xd");
+        }
+        else
+        {
+
         GameObject elcositoquespawnee;
 
-        elcositoquespawnee = Instantiate (Prefab, CanvasTransform);
+        elcositoquespawnee = Instantiate (Prefab,transform.position,transform.rotation, CanvasTransform);
+        
+        }
 
-
-        WhenSpawn.EventSpawn(elcositoquespawnee.transform);
-    
     }
 
 }
@@ -37,5 +45,9 @@ public static class WhenSpawn
     public static Action EventRechaso;
 
     public static Action<Transform> EventSpawn;
+
+    public static Action<Rigidbody2D,Pizza> EventSpawnRb2d;
+
+
 
 }

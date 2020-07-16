@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class SwiperManager : MonoBehaviour
 {
@@ -13,13 +14,20 @@ public class SwiperManager : MonoBehaviour
     |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
     */
 
-    float speed = 0f;
+    public float speed = 0f;
     public Rigidbody2D rb2d;
     public Button YesBtn;
     public Button NoBtn;
     public Button ProfileBtn;
+    private Pizza PizzaPedida;
 
-    
+    void Awake()
+    {
+        // Escucha si los eventos son disparados y activa cositas UwU
+         WhenSpawn.EventSpawnRb2d += rb2dchanger;
+        SwiperManagerBtn.event_btn += BtnActivation;
+        SwiperManagerBtn.event_NoBtn += RechazoBtn;
+    }
 
     
   
@@ -31,28 +39,34 @@ public class SwiperManager : MonoBehaviour
         NoBtn.interactable = false;
         ProfileBtn.interactable = false;
 
-        // Escucha si los eventos son disparados y activa cositas UwU
-        SwiperManagerBtn.event_btn += BtnActivation;
-        SwiperManagerBtn.event_NoBtn += RechazoBtn;
+       
+
         
     }
 
     //solamente lo uso con Rigidbody2D para mover el perfil.
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         
         
-        rb2d.AddForce (new Vector2(speed,0));
         
 
     }
     
     public void Rechazo()
     {
-        speed = -500f;
+        
+        rb2d.AddForce (new Vector2(speed,0));
         
         Debug.Log("Rechasao");
 
+        
+
         //en un futuro muy cercano hay que cambiar el destroy por un cambio de estado a los perfiles de las pizzas
+
+        //cambio de estado "pedida" 
+
+        PizzaPedida.State = PizzaState.Rejected;
 
         Destroy(rb2d.gameObject, 5);
         
@@ -60,7 +74,7 @@ public class SwiperManager : MonoBehaviour
         SwiperManagerBtn.event_NoBtn();
 
 
-    }
+    }       
     public void BtnActivation()
     {
 
@@ -88,6 +102,27 @@ public class SwiperManager : MonoBehaviour
         YesBtn.interactable = false;
         NoBtn.interactable = false;
         ProfileBtn.interactable = false;
+        
+        
+        
+    }
+
+    
+    public void rb2dchanger (Rigidbody2D rb2dpref, Pizza unaPizzaran)
+    {
+
+        rb2d = rb2dpref;
+
+        PizzaPedida = unaPizzaran;
+    }
+    public void aceptacion()
+    {
+
+
+        PizzaPedida.State = PizzaState.Matched;
+
+        SceneManager.LoadScene ("ChatScene");
+        
     }
 
 

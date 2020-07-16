@@ -7,13 +7,25 @@ using UnityEngine.UI;
 public class ImageProfileSelec : MonoBehaviour
 {
     public Image AvatarPizzaProfile; 
+    public Pizza unaPizzaRandom;
 
     void Start()
     {
-        Pizza unaPizzaRandom = Game.Current.RemainingPizzas.GetRandom();
+        unaPizzaRandom = Game.Current.RemainingPizzas.GetRandom();
         Debug.Log("obtuviste: " + unaPizzaRandom.Name);
+
         
+        WhenSpawn.EventSpawn(transform);
+        
+        Rigidbody2D rb2dprefab;
+
+        rb2dprefab = GetComponent<Rigidbody2D>();
+
+        WhenSpawn.EventSpawnRb2d(rb2dprefab, unaPizzaRandom);
+
         AvatarPizzaProfile.sprite = unaPizzaRandom.Image;
+
+        
 
     }
 
@@ -22,4 +34,5 @@ public class ImageProfileSelec : MonoBehaviour
     {
         
     }
+
 }

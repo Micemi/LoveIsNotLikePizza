@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Swiper.unity
     guid: 3f39b2e7e33ab0141ace22afc9048edc
+  - enabled: 1
+    path: Assets/Scenes/ChatScene.unity
+    guid: 60474c5d90b22aa4f9bcf6ee713f426b
   m_configObjects: {}
