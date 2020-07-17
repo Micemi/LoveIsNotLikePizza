@@ -2040,6 +2040,12 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5168803833317386639, guid: 1539c2785e74d03489e1017c0239097f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7359176787605222627, guid: 9067debabb97d0b40bf22d7af02ffe6c,
+        type: 3}
     - target: {fileID: 8477886219302278737, guid: 1539c2785e74d03489e1017c0239097f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

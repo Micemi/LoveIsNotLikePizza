@@ -1765,7 +1765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3900970619478264772, guid: 0ad63b913fbca604695ed50e3eeb304a,
+  m_Sprite: {fileID: 7359176787605222627, guid: 9067debabb97d0b40bf22d7af02ffe6c,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2290,7 +2290,7 @@ MonoBehaviour:
     of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
     publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
-    
+
 
 '
   m_isRightToLeft: 0
@@ -2362,12 +2362,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1796342538}
-    characterCount: 652
+    characterCount: 651
     spriteCount: 0
-    spaceCount: 103
+    spaceCount: 104
     wordCount: 103
     linkCount: 0
-    lineCount: 25
+    lineCount: 26
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
