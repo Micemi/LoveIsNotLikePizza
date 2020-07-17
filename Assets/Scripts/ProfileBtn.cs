@@ -13,7 +13,7 @@ public class ProfileBtn : MonoBehaviour
     public void ProfileScene()
     {
       Debug.Log("Muestra tu Perfil");
-       // SceneManager.LoadScene ("); <---- Agregar la escena "Profile" cuando este lista
+      SceneManager.LoadScene ("ProfileScene"); 
     }
 
     

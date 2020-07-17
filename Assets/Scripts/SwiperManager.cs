@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SwiperManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class SwiperManager : MonoBehaviour
     public Button NoBtn;
     public Button ProfileBtn;
     private Pizza PizzaPedida;
+    public TextMeshPro PizzaName;
 
     void Awake()
     {
@@ -47,7 +49,6 @@ public class SwiperManager : MonoBehaviour
     //solamente lo uso con Rigidbody2D para mover el perfil.
     void FixedUpdate()
     {
-        
         
         
 
@@ -118,10 +119,12 @@ public class SwiperManager : MonoBehaviour
     public void aceptacion()
     {
 
+        
 
         PizzaPedida.State = PizzaState.Matched;
 
         SceneManager.LoadScene ("ChatScene");
+
         
     }
 
