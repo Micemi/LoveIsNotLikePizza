@@ -10,29 +10,36 @@ public class ProfileSpawner : MonoBehaviour
     public Transform CanvasTransform;
     
 
+    void OnEnable()
+    {
+        WhenSpawn.EventRechaso += spawnprefab;
+    }
+    
+    void OnDisable()
+    {
+        WhenSpawn.EventRechaso -= spawnprefab;
+    }
 
     void Start()
     {
 
         spawnprefab();
 
-        WhenSpawn.EventRechaso += spawnprefab;
         
     }
 
     public void spawnprefab()
     {
-       if ( Game.Current.RemainingPizzas.Count == 0)
-
+        if ( Game.Current.RemainingPizzas.Count == 0)
         {
             Debug.Log("No hay mas pizzas xd");
         }
         else
         {
 
-        GameObject elcositoquespawnee;
+            GameObject elcositoquespawnee;
 
-        elcositoquespawnee = Instantiate (Prefab,transform.position,transform.rotation, CanvasTransform);
+            elcositoquespawnee = Instantiate (Prefab,transform.position,transform.rotation, CanvasTransform);
         
         }
 

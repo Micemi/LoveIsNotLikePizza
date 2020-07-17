@@ -21,14 +21,21 @@ public class SwiperManager : MonoBehaviour
     public Button ProfileBtn;
     private Pizza PizzaPedida;
 
-    void Awake()
+    void OnEnable()
     {
         // Escucha si los eventos son disparados y activa cositas UwU
-         WhenSpawn.EventSpawnRb2d += rb2dchanger;
+        WhenSpawn.EventSpawnRb2d += rb2dchanger;
         SwiperManagerBtn.event_btn += BtnActivation;
         SwiperManagerBtn.event_NoBtn += RechazoBtn;
     }
 
+    void OnDisable()
+    {
+        // Desactiva la escucha al desactivarse este gameobject UwU
+        WhenSpawn.EventSpawnRb2d -= rb2dchanger;
+        SwiperManagerBtn.event_btn -= BtnActivation;
+        SwiperManagerBtn.event_NoBtn -= RechazoBtn;
+    }
     
   
     void Start()
@@ -121,7 +128,7 @@ public class SwiperManager : MonoBehaviour
 
         PizzaPedida.State = PizzaState.Matched;
 
-        SceneManager.LoadScene ("ChatScene");
+        SceneChanger.GoToChat();
         
     }
 
