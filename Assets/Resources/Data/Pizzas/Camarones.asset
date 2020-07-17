@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
-  m_Name: Ananuwu
+  m_Name: Camarones
   m_EditorClassIdentifier: 
-  Name: Ananuwu
-  Description: Me dicen Uwu, Ana-Nuwu.
-  Image: {fileID: -8968429528283915964, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
+  Name: Cameron Diaz ahre
+  Description: 'Dejate llevar, ignora los bichos marinos que tengo en el cuerpo...
+    son para mas placer. '
+  Image: {fileID: 4439138622813737534, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: 3e2f558b30b5af04181f99104be3f4a3, type: 2}
   AvailableFlavors: 01000000020000000300000004000000

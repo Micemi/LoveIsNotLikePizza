@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
-  m_Name: Quique Roquella
+  m_Name: Faina
   m_EditorClassIdentifier: 
-  Name: Quique Roquella
-  Description: Cuidado si ven a mi hijo en esta pag. Rechazenlo. Por su bien.
-  Image: {fileID: -3884903046316497960, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
-  Difficulty: {fileID: 11400000, guid: 228dd8fbe52e7f148a4f2de82d2e5056, type: 2}
-  AvailableFlavors: 0100000004000000
+  Name: Faina
+  Description: 'PIZZA CONMIGO. PIZZA CONMIGO. Ah, no era esa. '
+  Image: {fileID: -7800366281793172183, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
+  Difficulty: {fileID: 11400000, guid: 76e0de01e7936c64eb2ec1d1b6ae2ed9, type: 2}
+  AvailableFlavors: 

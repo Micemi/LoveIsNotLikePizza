@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e90fcd0592c34653b647c1a25d882bc0, type: 3}
-  m_Name: Signo Stop
+  m_Name: GoodReaction
   m_EditorClassIdentifier: 
-  Name: Signo Stop
-  Image: {fileID: 21300000, guid: 7172b6af8bd4df84f899e069d7765102, type: 3}
+  Name: GoodReaction
+  Image: {fileID: 21300000, guid: 2c4eaba7cf6ca194b8f89b8a1d8a8c28, type: 3}
   Flavor: 0
-  Category: 2
+  Category: 1

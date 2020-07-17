@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
-  m_Name: Peperoni
+  m_Name: Ezphezial
   m_EditorClassIdentifier: 
-  Name: Peperoni
-  Image: {fileID: 21300000, guid: 70eb13b7313cfe84898072d7f3735ba0, type: 3}
-  Difficulty: {fileID: 11400000, guid: 228dd8fbe52e7f148a4f2de82d2e5056, type: 2}
-  AvailableFlavors: 0100000002000000
+  Name: Ezphezial
+  Description: Soy Ezphezial we
+  Image: {fileID: 1072864183008446670, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
+  Difficulty: {fileID: 11400000, guid: a52f3ff5376f81246a9998a4eccb1762, type: 2}
+  AvailableFlavors: 040000000200000003000000
