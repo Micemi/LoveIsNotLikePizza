@@ -1,18 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Create Reputazzione Configuration")]
-public class ReputazzioneData : ScriptableSingleton<ReputazzioneData>
+public class ReputazzioneData : ScriptableObject
 {
+    private static ReputazzioneData instance;
+    public static ReputazzioneData Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = Resources.LoadAll<ReputazzioneData>("Data")[0];
+            return instance;
+        }
+    }
+
     [Serializable]
     private struct PointConversion
     {
         public float PointsUpperLimit;
         public string Title;
     }
-    
+
     [SerializeField]
     private List<PointConversion> pointConversions = new List<PointConversion>();
 
@@ -29,5 +39,5 @@ public class ReputazzioneData : ScriptableSingleton<ReputazzioneData>
         return pointConversions[pointConversions.Count - 1].Title; // maximum points
     }
 
-    public static string GetReputazzione(float points) => instance.PGetReputazzione(points);
+    public static string GetReputazzione(float points) => Instance.PGetReputazzione(points);
 }
