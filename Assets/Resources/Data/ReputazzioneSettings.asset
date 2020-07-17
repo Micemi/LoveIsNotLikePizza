@@ -13,17 +13,15 @@ MonoBehaviour:
   m_Name: ReputazzioneSettings
   m_EditorClassIdentifier: 
   pointConversions:
-  - PointsUpperLimit: 8000
-    Title: Deshonor
+  - PointsUpperLimit: 9000
+    Title: Estandar Puttanesca
   - PointsUpperLimit: 15000
-    Title: Weon to feo
+    Title: Amateur La Massa
+  - PointsUpperLimit: 20000
+    Title: Pobre Zitto
   - PointsUpperLimit: 30000
-    Title: Mmmm
+    Title: Dandy Oregano
+  - PointsUpperLimit: 45000
+    Title: Cebollita Trento
   - PointsUpperLimit: 50000
-    Title: Normal
-  - PointsUpperLimit: 70000
-    Title: Rico
-  - PointsUpperLimit: 79000
-    Title: Mamado
-  - PointsUpperLimit: 80000
-    Title: "San Mart\xEDn"
+    Title: Master Capri
