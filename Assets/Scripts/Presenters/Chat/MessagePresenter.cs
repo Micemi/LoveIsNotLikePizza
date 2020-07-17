@@ -31,6 +31,8 @@ public class MessagePresenter : MonoBehaviour
         if (timeText != null)
             timeText.text = DateTime.Now.ToString("h:mm tt", CultureInfo.InvariantCulture);
 
+        if (emoji == null) return;
+
         emojiImage.sprite = emoji?.Image;
 
         if (secondEmojiImage != null)
