@@ -128,6 +128,7 @@ public class SwiperManager : MonoBehaviour
     {
 
         
+        
 
         PizzaPedida.State = PizzaState.Matched;
 
