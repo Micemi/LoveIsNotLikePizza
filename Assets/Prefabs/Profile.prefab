@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 7272939361827794553}
   - component: {fileID: 1495693701581309565}
   - component: {fileID: 3326641112498125229}
+  - component: {fileID: 1755000139785289068}
   m_Layer: 5
   m_Name: PizzasImage
   m_TagString: Untagged
@@ -376,7 +377,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -183, y: 178.6}
-  m_SizeDelta: {x: 352, y: 350}
+  m_SizeDelta: {x: 346, y: 348}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1495693701581309565
 CanvasRenderer:
@@ -405,8 +406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2904546413220506561, guid: 328a1336744a7694fbb18479fccc6052,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7260608fb27f90742af87e450f1513c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -416,6 +416,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1755000139785289068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790390634461556794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8796e127aca31d9449ae0ffc527c13ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 3326641112498125229}
+  spritesBySliceCount:
+  - {fileID: 21300000, guid: 7260608fb27f90742af87e450f1513c2, type: 3}
+  - {fileID: 21300000, guid: 79b518bf935173e439fe16e8bac3017a, type: 3}
+  - {fileID: 21300000, guid: da1d29b5d29891a4d9ee362fd901de36, type: 3}
+  - {fileID: 21300000, guid: 3e0dbb3564cbabe46ad31277c2733d22, type: 3}
+  - {fileID: 21300000, guid: 768378fa87e2c2041b169aa21888f179, type: 3}
+  - {fileID: 21300000, guid: af5e69f8a0699b14c81d9cf17c086084, type: 3}
+  - {fileID: 21300000, guid: 3855a7a30f15cdc4ab652bc86e1b9aa8, type: 3}
 --- !u!1 &1683664008509920009
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,7 +617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00091552734}
+  m_AnchoredPosition: {x: 0, y: 0.000061035156}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &7872203217533316607

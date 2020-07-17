@@ -30,7 +30,7 @@ public class ProfileSpawner : MonoBehaviour
 
     public void spawnprefab()
     {
-        if ( Game.Current.RemainingPizzas.Count == 0 || Game.Current.ChattedWithPizzas.Count == 8 )
+        if ( Game.Current.RemainingPizzas.Count == 0 || Game.Current.ChattedWithPizzas.Count == 6 )
         {
             SceneChanger.GoToProfile();
         }
