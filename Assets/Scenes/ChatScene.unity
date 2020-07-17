@@ -2046,6 +2046,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7359176787605222627, guid: 9067debabb97d0b40bf22d7af02ffe6c,
         type: 3}
+    - target: {fileID: 6225212512760757631, guid: 1539c2785e74d03489e1017c0239097f,
+        type: 3}
+      propertyPath: hoverFx
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a87df15afe4425438a45ed781e77995, type: 3}
+    - target: {fileID: 6603278729844767290, guid: 1539c2785e74d03489e1017c0239097f,
+        type: 3}
+      propertyPath: hoverFx
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a87df15afe4425438a45ed781e77995, type: 3}
     - target: {fileID: 8477886219302278737, guid: 1539c2785e74d03489e1017c0239097f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
