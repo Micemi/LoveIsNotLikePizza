@@ -7,7 +7,6 @@ public class ChatPresenter : MonoBehaviour
     private MessageContainerPresenter messageContainer;
 
     private Chat chat;
-    public Chat Chat => chat;
 
     private bool chatRunning;
     public bool ChatRunning => chatRunning;
@@ -59,7 +58,6 @@ public class ChatPresenter : MonoBehaviour
         chat.OnChatFinish         -= FinishChat;
     }
 
-    
     public void StartChat()
     {
         pizza = Game.Current.MatchedPizzas[0];

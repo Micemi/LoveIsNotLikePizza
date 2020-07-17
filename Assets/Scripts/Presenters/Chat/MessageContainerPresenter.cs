@@ -33,6 +33,7 @@ public class MessageContainerPresenter : MonoBehaviour
 
     private bool wasWaitingForPlayerEmojiFired;
 
+    /*
     private void OnEnable()
     {
         chat.OnChatStarted += ClearMessages;
@@ -49,6 +50,7 @@ public class MessageContainerPresenter : MonoBehaviour
         foreach (Transform child in messageContainer)
             Destroy(child.gameObject);
     }
+    */
 
     private void Awake()
     {
@@ -56,7 +58,7 @@ public class MessageContainerPresenter : MonoBehaviour
         {
             [MessageType.Player] = playerMessagePrefab,
             [MessageType.PizzaEmoji] = pizzaMessagePrefab,
-            [MessageType.PizzaReaction] = pizzaReactionPrefab
+            [MessageType.PizzaReaction] = pizzaReactionPrefab,
         };
     }
 
@@ -92,7 +94,7 @@ public class MessageContainerPresenter : MonoBehaviour
         messageScroller.verticalNormalizedPosition = 0; // scrolls to bottom
     }
     
-    public void EnqueuePizzaMessage(Emoji emoji)  => EnqueueMessage(emoji, chat.Pizza, MessageType.PizzaEmoji);
+    public void EnqueuePizzaMessage(Emoji emoji)   => EnqueueMessage(emoji, chat.Pizza, MessageType.PizzaEmoji);
     public void EnqueuePizzaReaction(Emoji emoji)  => EnqueueMessage(emoji, chat.Pizza, MessageType.PizzaReaction);
 
     public void EnqueuePlayerMessage(Emoji emoji)
