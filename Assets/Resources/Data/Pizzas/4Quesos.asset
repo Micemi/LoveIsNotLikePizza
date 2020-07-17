@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 4Quesos
   m_EditorClassIdentifier: 
   Name: Lauti Roquella
-  Description: 'Me gusta el cuarteto y jugar al teto de a cuatro. '
+  Description: "Me gusta el cuarteto y jugar al teto de a cuatro. \nSi ves a mi viejo
+    bloquealo, porfa. "
   Image: {fileID: 7376650684526368181, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: a52f3ff5376f81246a9998a4eccb1762, type: 2}
   AvailableFlavors: 010000000200000004000000

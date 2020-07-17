@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
   m_Name: Capresse
   m_EditorClassIdentifier: 
-  Name: Capresse
-  Description: Soy LA DE CAPRESSE que mas queres estoy re buena ah
+  Name: Mica Presse
+  Description: "Soy LA MICA PRESSE, que m\xE1s queres estoy re buena. Tengo todo
+    lo que quieren las wachas."
   Image: {fileID: -740062424425936534, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: a52f3ff5376f81246a9998a4eccb1762, type: 2}
   AvailableFlavors: 030000000200000004000000

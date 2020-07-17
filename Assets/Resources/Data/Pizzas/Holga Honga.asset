@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
   m_Name: Holga Honga
   m_EditorClassIdentifier: 
-  Name: Holga Honga
-  Description: Te voy a hacer alucinar ;)))))
+  Name: Sor Holga
+  Description: ' Lista para romper el voto de castidad hasta la orillita ;) Tengo
+    honguitos de los buenos para hacerte alucinar uwu'
   Image: {fileID: -3392541254565803506, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: 228dd8fbe52e7f148a4f2de82d2e5056, type: 2}
   AvailableFlavors: 0400000002000000

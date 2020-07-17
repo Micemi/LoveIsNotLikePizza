@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
   m_Name: Lonja Fit
   m_EditorClassIdentifier: 
-  Name: Lonja Fit
-  Description: JAAAAAAAAAMON
+  Name: "Serra R\xFAgulini "
+  Description: "Busco a alguien que estimule mi imaginaci\xF3n. No te asustes si
+    te sube la presi\xF3n, bb, suelo causar eso en la gente. "
   Image: {fileID: 5219821641667761720, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: 228dd8fbe52e7f148a4f2de82d2e5056, type: 2}
   AvailableFlavors: 0300000004000000

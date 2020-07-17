@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Ananuwu
   m_EditorClassIdentifier: 
   Name: Ananuwu
-  Description: Me dicen Uwu, Ana-Nuwu.
+  Description: 'Me dicen Uwu, Ana-Nuwu.
+
+    Y al que no le gusta que se joda.'
   Image: {fileID: -8968429528283915964, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: 3e2f558b30b5af04181f99104be3f4a3, type: 2}
   AvailableFlavors: 01000000020000000300000004000000

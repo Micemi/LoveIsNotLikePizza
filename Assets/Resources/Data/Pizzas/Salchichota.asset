@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
   m_Name: Salchichota
   m_EditorClassIdentifier: 
-  Name: John Salchichon
-  Description: 'Amo las salchichas. Le entro a todo pero sobre todo a los embutidos. '
+  Name: Chicha
+  Description: "Busco embutido no t\xF3xico. Me conformo con viena. Marcas desconocidas
+    abstenerse. "
   Image: {fileID: -8645312591624372631, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: a52f3ff5376f81246a9998a4eccb1762, type: 2}
   AvailableFlavors: 010000000200000004000000

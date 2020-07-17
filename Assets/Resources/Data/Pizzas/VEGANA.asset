@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
-  m_Name: Veggie Fit
+  m_Name: VEGANA
   m_EditorClassIdentifier: 
   Name: 'Veg, Ana Laura '
-  Description: "No tengo carne, pero me encantar\xEDa probar la tuya. #FitLife #Protein"
+  Description: "No tengo carne, pero me encantar\xEDa probar la tuya. #FitLife #Protein
+    #CannibalismIsMyPassion"
   Image: {fileID: -7210378269564264800, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: 228dd8fbe52e7f148a4f2de82d2e5056, type: 2}
   AvailableFlavors: 0200000003000000

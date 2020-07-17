@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PIZZETA
   m_EditorClassIdentifier: 
   Name: Susy
-  Description: Como se juega esto? Estaba en el celu de mi hermano. Para que es eso
-    de la calentura?
+  Description: "C\xF3mo se juega esto? Estaba en el celu de mi hermano. Para qu\xE9
+    es eso de la calentura?"
   Image: {fileID: 1610291602994245676, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: 76e0de01e7936c64eb2ec1d1b6ae2ed9, type: 2}
   AvailableFlavors: 

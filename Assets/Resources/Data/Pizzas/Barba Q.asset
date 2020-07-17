@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
   m_Name: Barba Q
   m_EditorClassIdentifier: 
-  Name: Barba Q
-  Description: 
+  Name: Barbie Q
+  Description: 'Ojo con lo que miras. Mis ojos estan aca arriba. '
   Image: {fileID: 1740347701853832485, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: 228dd8fbe52e7f148a4f2de82d2e5056, type: 2}
   AvailableFlavors: 0100000003000000

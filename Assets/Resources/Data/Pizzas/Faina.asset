@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
   m_Name: Faina
   m_EditorClassIdentifier: 
-  Name: Faina
-  Description: 'PIZZA CONMIGO. PIZZA CONMIGO. Ah, no era esa. '
+  Name: "Rafa Ign\xE1"
+  Description: 'F. Vendo Duna 98 GNC. Solo interesados. '
   Image: {fileID: -7800366281793172183, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: 76e0de01e7936c64eb2ec1d1b6ae2ed9, type: 2}
   AvailableFlavors: 

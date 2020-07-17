@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
   m_Name: Muzzarella
   m_EditorClassIdentifier: 
-  Name: Muzzarella
-  Description: MEGUSTALAPORONGA
+  Name: Camu Zarella
+  Description: "Una pizza en el cementerio llora.\r\nOtra pizza y le pregunta:\r\n-\xBFEs
+    familiar?\r\n-No,es mediana.\r\n"
   Image: {fileID: -1988559167314113582, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: a52f3ff5376f81246a9998a4eccb1762, type: 2}
   AvailableFlavors: 020000000100000004000000
