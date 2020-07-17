@@ -7,4 +7,9 @@ public class ChangeScene : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         Debug.Log("Changed Scene");
     }
+
+    public void ChangeToNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
