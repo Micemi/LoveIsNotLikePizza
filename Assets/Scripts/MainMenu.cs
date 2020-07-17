@@ -12,6 +12,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
     //  Las acciones de referenciado se hacen desde el mismo unity arrastrando los gameobj con sus scripts
     public void Play(){
+        // Initialize a new game every time we hit Play
+        // This resets pizza status and points
+        Game.NewGame();
+        
         //  Scene manager is used from the library of unityengine
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   //  this loads the next lvl in queue
         //  This snippet was extracted from (8:40) of the video
