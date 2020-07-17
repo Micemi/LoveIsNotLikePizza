@@ -87,5 +87,11 @@ public class ChatPresenter : MonoBehaviour
         OnChatFinished.Invoke();
         // Acá de alguna forma hay que pasarle estos puntos a una pantalla de éxito
         Debug.Log($"Yay! You got {points} points!");
+        
     }
+
+
+
+
+
 }

@@ -9,6 +9,7 @@ public class MusicPersistence : MonoBehaviour
     /// </summary>
     void Awake()
     {
+        
         if (instance == null)
         {
             // This is like a Singleton!
@@ -19,5 +20,6 @@ public class MusicPersistence : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 }
