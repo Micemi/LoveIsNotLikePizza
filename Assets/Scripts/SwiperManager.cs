@@ -55,7 +55,7 @@ public class SwiperManager : MonoBehaviour
     }
 
     //solamente lo uso con Rigidbody2D para mover el perfil.
-    void FixedUpdate()
+    void LateUpdate()
     {
         
         PizzaName.text = PizzaPedida.Name;
