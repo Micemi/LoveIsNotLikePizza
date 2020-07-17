@@ -124,16 +124,24 @@ public class SwiperManager : MonoBehaviour
 
         PizzaPedida = unaPizzaran;
     }
+
+    IEnumerator CoroutineReLoca()
+    {
+        
+        yield return new WaitForSeconds(0.6f);
+        SceneChanger.GoToChat();
+
+    }
+
     public void aceptacion()
     {
 
         
-        
+        StartCoroutine(CoroutineReLoca());
 
         PizzaPedida.State = PizzaState.Matched;
 
 
-        SceneChanger.GoToChat();
 
         
     }

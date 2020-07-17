@@ -969,7 +969,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1175413366}
         m_MethodName: SetActive
@@ -980,7 +980,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 707408998}
         m_MethodName: aceptacion
@@ -1087,8 +1087,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myFx: {fileID: 815794206}
-  hoverFx: {fileID: 8300000, guid: 5953498a092c5004abd588a5ec230c8f, type: 3}
-  clickFx: {fileID: 8300000, guid: de1d551c6a060d949a1534dd742f4e7f, type: 3}
+  hoverFx: {fileID: 8300000, guid: 4a87df15afe4425438a45ed781e77995, type: 3}
+  clickFx: {fileID: 8300000, guid: 05c48bbdc188a0345a5652a079ae286e, type: 3}
 --- !u!82 &815794206
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1592,7 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myFx: {fileID: 1175413371}
-  hoverFx: {fileID: 8300000, guid: 5953498a092c5004abd588a5ec230c8f, type: 3}
+  hoverFx: {fileID: 8300000, guid: 4a87df15afe4425438a45ed781e77995, type: 3}
   clickFx: {fileID: 8300000, guid: de1d551c6a060d949a1534dd742f4e7f, type: 3}
 --- !u!114 &1175413373
 MonoBehaviour:
@@ -1611,7 +1611,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 815794205}
+        - m_Target: {fileID: 1175413372}
           m_MethodName: HoverFx
           m_Mode: 1
           m_Arguments:
@@ -1626,7 +1626,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 815794205}
+        - m_Target: {fileID: 1175413372}
           m_MethodName: ClickFx
           m_Mode: 1
           m_Arguments:
