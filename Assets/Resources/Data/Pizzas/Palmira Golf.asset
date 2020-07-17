@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
   m_Name: Palmira Golf
   m_EditorClassIdentifier: 
-  Name: Palmira Golf
-  Description: 
+  Name: Flavia Palmiero
+  Description: 'Aficionada al golf. No soy una chica facil, no te guies por mi foto. '
   Image: {fileID: -2910315543537260544, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: 3e2f558b30b5af04181f99104be3f4a3, type: 2}
   AvailableFlavors: 01000000020000000300000004000000

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Peperina
   m_EditorClassIdentifier: 
   Name: Peperina
-  Description: 
+  Description: "Busco amor. Ya me han roto el coraz\xF3n muchas veces :("
   Image: {fileID: 8498968533099733915, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: 228dd8fbe52e7f148a4f2de82d2e5056, type: 2}
   AvailableFlavors: 0100000002000000

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
   m_Name: HuevoPanceta
   m_EditorClassIdentifier: 
-  Name: HuevoPanceta
-  Description: 
+  Name: Kevin Tocino
+  Description: Yo pongo los huevos, vos pone lo que falta ;)
   Image: {fileID: 6054352629808233313, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: a52f3ff5376f81246a9998a4eccb1762, type: 2}
   AvailableFlavors: 010000000300000004000000

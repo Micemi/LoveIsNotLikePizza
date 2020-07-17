@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Capresse
   m_EditorClassIdentifier: 
   Name: Capresse
-  Description: 
+  Description: Soy LA DE CAPRESSE que mas queres estoy re buena ah
   Image: {fileID: -740062424425936534, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: a52f3ff5376f81246a9998a4eccb1762, type: 2}
   AvailableFlavors: 030000000200000004000000

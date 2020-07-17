@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Faina
   m_EditorClassIdentifier: 
   Name: Faina
-  Description: 
+  Description: 'PIZZA CONMIGO. PIZZA CONMIGO. Ah, no era esa. '
   Image: {fileID: -7800366281793172183, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: 76e0de01e7936c64eb2ec1d1b6ae2ed9, type: 2}
   AvailableFlavors: 
