@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
-  m_Name: New Pizza Data 3
+  m_Name: Camarones
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Camarones
   Description: 
-  Image: {fileID: 0}
-  Difficulty: {fileID: 0}
-  AvailableFlavors: 
+  Image: {fileID: 4439138622813737534, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
+  Difficulty: {fileID: 11400000, guid: 3e2f558b30b5af04181f99104be3f4a3, type: 2}
+  AvailableFlavors: 01000000020000000300000004000000

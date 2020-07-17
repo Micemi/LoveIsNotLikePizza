@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Conicienta
   m_EditorClassIdentifier: 
   Name: Conicienta
-  Image: {fileID: -2431148178754989034, guid: 113d92b9bb0088d47a610a84693909e3, type: 3}
+  Description: 
+  Image: {fileID: 973091525494775903, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: 72c4cb4c3189aea4f99105f617ba82e3, type: 2}
   AvailableFlavors: 01000000020000000300000004000000

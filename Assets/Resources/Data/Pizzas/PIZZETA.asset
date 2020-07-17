@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
-  m_Name: New Pizza Data 7
+  m_Name: PIZZETA
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Pizzeta
   Description: 
-  Image: {fileID: 0}
-  Difficulty: {fileID: 0}
+  Image: {fileID: 1610291602994245676, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
+  Difficulty: {fileID: 11400000, guid: 76e0de01e7936c64eb2ec1d1b6ae2ed9, type: 2}
   AvailableFlavors: 

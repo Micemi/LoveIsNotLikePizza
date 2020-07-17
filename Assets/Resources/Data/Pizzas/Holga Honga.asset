@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Holga Honga
   m_EditorClassIdentifier: 
   Name: Holga Honga
-  Image: {fileID: -4632457931635705406, guid: 113d92b9bb0088d47a610a84693909e3, type: 3}
+  Description: 
+  Image: {fileID: -3392541254565803506, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: 228dd8fbe52e7f148a4f2de82d2e5056, type: 2}
   AvailableFlavors: 0400000002000000

@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
-  m_Name: Tu Anchoita
+  m_Name: Danna Anchorena
   m_EditorClassIdentifier: 
-  Name: Tu Anchoita
-  Image: {fileID: -893447485641456011, guid: 113d92b9bb0088d47a610a84693909e3, type: 3}
+  Name: Danna Anchorena
+  Description: 
+  Image: {fileID: 6521812519876856310, guid: 63d2007028d3d4f4ab5e119eee85cfa1, type: 3}
   Difficulty: {fileID: 11400000, guid: 3e2f558b30b5af04181f99104be3f4a3, type: 2}
   AvailableFlavors: 01000000020000000300000004000000

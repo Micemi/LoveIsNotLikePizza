@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Barba Q
   m_EditorClassIdentifier: 
   Name: Barba Q
-  Image: {fileID: -179839886202594109, guid: 113d92b9bb0088d47a610a84693909e3, type: 3}
+  Description: 
+  Image: {fileID: 1740347701853832485, guid: fe82bb9a2cabd1a43b1669dc5e071c78, type: 3}
   Difficulty: {fileID: 11400000, guid: 228dd8fbe52e7f148a4f2de82d2e5056, type: 2}
   AvailableFlavors: 0100000003000000
