@@ -21,7 +21,8 @@ public class SwiperManager : MonoBehaviour
     public Button NoBtn;
     public Button ProfileBtn;
     private Pizza PizzaPedida;
-    public TextMeshPro PizzaName;
+    public TextMeshProUGUI PizzaName;
+    public TextMeshProUGUI PizzaDescription;
 
     void OnEnable()
     {
@@ -57,8 +58,8 @@ public class SwiperManager : MonoBehaviour
     void FixedUpdate()
     {
         
-        
-
+        PizzaName.text = PizzaPedida.Name;
+        PizzaDescription.text = PizzaPedida.Description;
     }
     
     public void Rechazo()
