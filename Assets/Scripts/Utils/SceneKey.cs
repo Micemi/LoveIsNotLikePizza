@@ -2,6 +2,21 @@
 
 public class SceneKey : MonoBehaviour
 {
+    private static SceneKey instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); //  Literally what it says there
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Update()
     {
         // if (Input.GetKeyDown("1"))
