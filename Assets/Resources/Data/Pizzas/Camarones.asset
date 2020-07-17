@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90fcd0592c34653b647c1a25d882bc0, type: 3}
-  m_Name: dummy_creepy_emoji
+  m_Script: {fileID: 11500000, guid: 6c5df9236e032bc4aa35f8a269c74da3, type: 3}
+  m_Name: New Pizza Data 3
   m_EditorClassIdentifier: 
-  Name: adsd
-  Image: {fileID: 21300000, guid: bbc6972aded57374bab738fdd1270fc8, type: 3}
-  Flavor: 3
-  Category: 0
+  Name: 
+  Description: 
+  Image: {fileID: 0}
+  Difficulty: {fileID: 0}
+  AvailableFlavors: 

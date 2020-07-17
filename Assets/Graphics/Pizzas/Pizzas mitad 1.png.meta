@@ -1,46 +1,58 @@
 fileFormatVersion: 2
-guid: 113d92b9bb0088d47a610a84693909e3
+guid: fe82bb9a2cabd1a43b1669dc5e071c78
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3308503525081666091
-    second: pizzASprimeras5-export900_0
+      213: 1072864183008446670
+    second: Pizzas mitad 1_0
   - first:
-      213: 9174158339702742655
-    second: pizzASprimeras5-export900_1
+      213: -8645312591624372631
+    second: Pizzas mitad 1_1
   - first:
-      213: -9049619788607415110
-    second: pizzASprimeras5-export900_2
+      213: -1988559167314113582
+    second: Pizzas mitad 1_2
   - first:
-      213: -179839886202594109
-    second: pizzASprimeras5-export900_3
+      213: -3112993088547452658
+    second: Pizzas mitad 1_3
   - first:
-      213: -384063351080572966
-    second: pizzASprimeras5-export900_4
+      213: -4789451963696963951
+    second: Pizzas mitad 1_4
   - first:
-      213: 6290296027950973193
-    second: pizzASprimeras5-export900_5
+      213: -5302148212771168803
+    second: Pizzas mitad 1_5
   - first:
-      213: -5979583456898676654
-    second: pizzASprimeras5-export900_6
+      213: 4439138622813737534
+    second: Pizzas mitad 1_6
   - first:
-      213: -4632457931635705406
-    second: pizzASprimeras5-export900_7
+      213: 7376650684526368181
+    second: Pizzas mitad 1_7
   - first:
-      213: -882036687668937597
-    second: pizzASprimeras5-export900_8
+      213: 6054352629808233313
+    second: Pizzas mitad 1_8
   - first:
-      213: 2460447511462056447
-    second: pizzASprimeras5-export900_9
+      213: 5219821641667761720
+    second: Pizzas mitad 1_9
   - first:
-      213: -893447485641456011
-    second: pizzASprimeras5-export900_10
+      213: -510626690329842488
+    second: Pizzas mitad 1_10
   - first:
-      213: 4725045020289981467
-    second: pizzASprimeras5-export900_11
+      213: 9020575828780820890
+    second: Pizzas mitad 1_11
   - first:
-      213: -2431148178754989034
-    second: pizzASprimeras5-export900_12
+      213: -7210378269564264800
+    second: Pizzas mitad 1_12
+  - first:
+      213: 1740347701853832485
+    second: Pizzas mitad 1_13
+  - first:
+      213: -4980106545228974261
+    second: Pizzas mitad 1_14
+  - first:
+      213: -8640507212037455070
+    second: Pizzas mitad 1_15
+  - first:
+      213: -8968429528283915964
+    second: Pizzas mitad 1_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -138,11 +150,179 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pizzASprimeras5-export900_0
+      name: Pizzas mitad 1_0
       rect:
         serializedVersion: 2
-        x: 376
-        y: 3294
+        x: 594
+        y: 2981
+        width: 751
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec845784a4493ee00800000000000000
+      internalID: 1072864183008446670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizzas mitad 1_1
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 2955
+        width: 745
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e7404b00ea50880800000000000000
+      internalID: -8645312591624372631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizzas mitad 1_2
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 2875
+        width: 742
+        height: 1022
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db456129f73764e0800000000000000
+      internalID: -1988559167314113582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizzas mitad 1_3
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 2810
+        width: 745
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0902e0874d6cc4d0800000000000000
+      internalID: -3112993088547452658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizzas mitad 1_4
+      rect:
+        serializedVersion: 2
+        x: 4735
+        y: 3659
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e9b0b80d2788db0800000000000000
+      internalID: -4789451963696963951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizzas mitad 1_5
+      rect:
+        serializedVersion: 2
+        x: 4825
+        y: 3614
+        width: 13
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd5d4fda4cfa66b0800000000000000
+      internalID: -5302148212771168803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizzas mitad 1_6
+      rect:
+        serializedVersion: 2
+        x: 4832
+        y: 2749
+        width: 745
+        height: 1023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e329781de0dfa9d30800000000000000
+      internalID: 4439138622813737534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizzas mitad 1_7
+      rect:
+        serializedVersion: 2
+        x: 5706
+        y: 2704
+        width: 752
+        height: 1022
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b51653e6b02f5660800000000000000
+      internalID: 7376650684526368181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizzas mitad 1_8
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1652
         width: 742
         height: 1019
       alignment: 0
@@ -152,19 +332,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dd2169b295d512d0800000000000000
-      internalID: -3308503525081666091
+      spriteID: 16bfba4b3a1650450800000000000000
+      internalID: 6054352629808233313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pizzASprimeras5-export900_1
+      name: Pizzas mitad 1_9
       rect:
         serializedVersion: 2
-        x: 1718
-        y: 3832
-        width: 11
+        x: 1258
+        y: 1604
+        width: 742
+        height: 1022
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836d0869028807840800000000000000
+      internalID: 5219821641667761720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizzas mitad 1_10
+      rect:
+        serializedVersion: 2
+        x: 2609
+        y: 2407
+        width: 13
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -173,19 +374,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7e5b273768215f70800000000000000
-      internalID: 9174158339702742655
+      spriteID: 8cc6e060bb3e9e8f0800000000000000
+      internalID: -510626690329842488
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pizzASprimeras5-export900_2
+      name: Pizzas mitad 1_11
       rect:
         serializedVersion: 2
-        x: 1349
-        y: 2582
-        width: 741
+        x: 5661
+        y: 1436
+        width: 745
         height: 1019
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,20 +395,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abc95bbcfba496280800000000000000
-      internalID: -9049619788607415110
+      spriteID: a99a4f75ce58f2d70800000000000000
+      internalID: 9020575828780820890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pizzASprimeras5-export900_3
+      name: Pizzas mitad 1_12
       rect:
         serializedVersion: 2
-        x: 2599
-        y: 2492
-        width: 741
-        height: 1019
+        x: 2242
+        y: 1155
+        width: 742
+        height: 1023
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,82 +416,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cc927a8394118df0800000000000000
-      internalID: -179839886202594109
+      spriteID: 0ae1d628a279feb90800000000000000
+      internalID: -7210378269564264800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pizzASprimeras5-export900_4
+      name: Pizzas mitad 1_13
       rect:
         serializedVersion: 2
-        x: 3399
-        y: 3329
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad7a893ca688baaf0800000000000000
-      internalID: -384063351080572966
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pizzASprimeras5-export900_5
-      rect:
-        serializedVersion: 2
-        x: 3489
-        y: 3283
-        width: 13
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9018116f8ee9b4750800000000000000
-      internalID: 6290296027950973193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pizzASprimeras5-export900_6
-      rect:
-        serializedVersion: 2
-        x: 3582
-        y: 2410
-        width: 758
-        height: 1020
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25880c2f680440da0800000000000000
-      internalID: -5979583456898676654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pizzASprimeras5-export900_7
-      rect:
-        serializedVersion: 2
-        x: 492
-        y: 1213
-        width: 743
+        x: 3493
+        y: 1065
+        width: 742
         height: 1022
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -299,20 +437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c9b9e31e0436bfb0800000000000000
-      internalID: -4632457931635705406
+      spriteID: 5254aaa9305f62810800000000000000
+      internalID: 1740347701853832485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pizzASprimeras5-export900_8
+      name: Pizzas mitad 1_14
       rect:
         serializedVersion: 2
-        x: 1701
-        y: 1140
-        width: 740
-        height: 1022
+        x: 4293
+        y: 1904
+        width: 13
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,20 +458,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38c71a84e4062c3f0800000000000000
-      internalID: -882036687668937597
+      spriteID: b47770c9b7b13eab0800000000000000
+      internalID: -4980106545228974261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pizzASprimeras5-export900_9
+      name: Pizzas mitad 1_15
       rect:
         serializedVersion: 2
-        x: 3085
-        y: 1105
-        width: 740
-        height: 1020
+        x: 4384
+        y: 1858
+        width: 12
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,20 +479,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff19035c9f3452220800000000000000
-      internalID: 2460447511462056447
+      spriteID: 2238e435870c61880800000000000000
+      internalID: -8640507212037455070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pizzASprimeras5-export900_10
+      name: Pizzas mitad 1_16
       rect:
         serializedVersion: 2
-        x: 809
-        y: 125
-        width: 740
-        height: 1020
+        x: 4474
+        y: 984
+        width: 761
+        height: 1023
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,50 +500,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57600e8de36d993f0800000000000000
-      internalID: -893447485641456011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pizzASprimeras5-export900_11
-      rect:
-        serializedVersion: 2
-        x: 2140
-        y: 143
-        width: 760
-        height: 1019
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1cdc1e596bb29140800000000000000
-      internalID: 4725045020289981467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pizzASprimeras5-export900_12
-      rect:
-        serializedVersion: 2
-        x: 3355
-        y: 286
-        width: 418
-        height: 734
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61498f8bc93d24ed0800000000000000
-      internalID: -2431148178754989034
+      spriteID: 449538d5cdcb98380800000000000000
+      internalID: -8968429528283915964
       vertices: []
       indices: 
       edges: []
