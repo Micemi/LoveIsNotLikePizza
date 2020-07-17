@@ -1,0 +1,320 @@
+fileFormatVersion: 2
+guid: dbdf0aa4b655c9a44aa6297fc3912c0f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7253531937304831238
+    second: Timer y profile pics de pizzas-1_0
+  - first:
+      213: 6808875840362644017
+    second: Timer y profile pics de pizzas-1_1
+  - first:
+      213: -843136695692169526
+    second: Timer y profile pics de pizzas-1_2
+  - first:
+      213: 850343618673714680
+    second: Timer y profile pics de pizzas-1_3
+  - first:
+      213: 869213801593300091
+    second: Timer y profile pics de pizzas-1_4
+  - first:
+      213: -6199563159491334592
+    second: Timer y profile pics de pizzas-1_5
+  - first:
+      213: -6811634084253206577
+    second: Timer_Background
+  - first:
+      213: -2124209641528841326
+    second: Timer y profile pics de pizzas-1_7
+  - first:
+      213: 8999965629684521406
+    second: Timer y profile pics de pizzas-1_8
+  - first:
+      213: -9023387129068544960
+    second: Timer y profile pics de pizzas-1_9
+  - first:
+      213: -7040891299181725764
+    second: Phone_Phone
+  - first:
+      213: -2666901448569218129
+    second: Phone_Camera
+  - first:
+      213: 972281996389786990
+    second: Phone_Gallery
+  - first:
+      213: -3163197514219736419
+    second: Phone_Exit
+  - first:
+      213: -2416420077533381239
+    second: Timer y profile pics de pizzas-1_14
+  - first:
+      213: 1634045534058858020
+    second: Timer y profile pics de pizzas-1_15
+  - first:
+      213: 1002660183102079988
+    second: Timer y profile pics de pizzas-1_16
+  - first:
+      213: -2665321024461604200
+    second: Timer y profile pics de pizzas-1_17
+  - first:
+      213: 1588657501136058348
+    second: Timer y profile pics de pizzas-1_18
+  - first:
+      213: -6339935463820362085
+    second: Timer y profile pics de pizzas-1_19
+  - first:
+      213: 6563859671374105490
+    second: Timer y profile pics de pizzas-1_20
+  - first:
+      213: 7818892299289382655
+    second: Timer y profile pics de pizzas-1_21
+  - first:
+      213: 7930922984299074642
+    second: Timer y profile pics de pizzas-1_22
+  - first:
+      213: 2107234545960309947
+    second: Timer y profile pics de pizzas-1_23
+  - first:
+      213: -6954108345406344972
+    second: Timer y profile pics de pizzas-1_24
+  - first:
+      213: 7521022599943199401
+    second: Timer y profile pics de pizzas-1_25
+  - first:
+      213: 7926626543595241531
+    second: Timer y profile pics de pizzas-1_26
+  - first:
+      213: -6757704929560186882
+    second: Timer y profile pics de pizzas-1_27
+  - first:
+      213: -8458086819418821008
+    second: Timer y profile pics de pizzas-1_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Timer_Background
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 1207
+        width: 2582
+        height: 1086
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7f424d3e63871a0800000000000000
+      internalID: -6811634084253206577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone_Phone
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 373
+        width: 316
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7722aeaaab94e90800000000000000
+      internalID: -7040891299181725764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone_Camera
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 373
+        width: 317
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab9e0b23434dfad0800000000000000
+      internalID: -2666901448569218129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone_Gallery
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 373
+        width: 317
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e652258035d3e7d00800000000000000
+      internalID: 972281996389786990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phone_Exit
+      rect:
+        serializedVersion: 2
+        x: 2086
+        y: 373
+        width: 317
+        height: 420
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92b882ce901a14d0800000000000000
+      internalID: -3163197514219736419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
