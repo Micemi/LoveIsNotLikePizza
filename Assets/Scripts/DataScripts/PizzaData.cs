@@ -20,7 +20,10 @@ public class PizzaData : ScriptableObject
         }
     }
 
-    [MenuItem("Love Pizza/Refresh Pizza Database"), RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+#if UNITY_EDITOR
+    [MenuItem("Love Pizza/Refresh Pizza Database")]
+#endif
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void ReloadPizzas()
     {
         pizzas = new List<PizzaData>(Resources.LoadAll<PizzaData>("Data/Pizzas"));
@@ -29,6 +32,7 @@ public class PizzaData : ScriptableObject
     #endregion
 
     public string Name;
+    [TextArea] public string Description;
     public Sprite Image;
     public DifficultyData Difficulty;
     [Tooltip("Son los flavors disponibles para que la pizza randomice. No puede ser menor que la cantidad de la dificultad. " +

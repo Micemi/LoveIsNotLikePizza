@@ -29,11 +29,17 @@ public class ProfileLerp : MonoBehaviour
     }
 
     // Start is called before the first frame update (.)Y(.)
-    void Awake()
+    void OnEnable()
     {
-        WhenSpawn.EventSpawn += StartLerping; 
+        WhenSpawn.EventSpawn += StartLerping;
 
     }
+
+    void OnDisable()
+    {
+        WhenSpawn.EventSpawn -= StartLerping;
+    }
+
     IEnumerator ExampleCoroutine()
     {
         //Print the time of when the function is first called.
@@ -71,12 +77,6 @@ public class ProfileLerp : MonoBehaviour
         var result = Vector3.Lerp(start, end, percentageComplete);
 
         return result;
-
-    }
-    public void DOOOOU()
-    {
-    
-
 
     }
 

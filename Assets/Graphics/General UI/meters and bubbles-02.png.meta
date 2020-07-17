@@ -26,6 +26,9 @@ TextureImporter:
   - first:
       213: -746036651189238281
     second: chat_message_2
+  - first:
+      213: 3343045199862958900
+    second: ThermometerMarker
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -290,7 +293,7 @@ TextureImporter:
         width: 1301
         height: 422
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -298,6 +301,27 @@ TextureImporter:
       bones: []
       spriteID: 7f581705e9b85a5f0800000000000000
       internalID: -746036651189238281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ThermometerMarker
+      rect:
+        serializedVersion: 2
+        x: 2996
+        y: 2922
+        width: 250
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b08e5a5e1e46e20800000000000000
+      internalID: 3343045199862958900
       vertices: []
       indices: 
       edges: []

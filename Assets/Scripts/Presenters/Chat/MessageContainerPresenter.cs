@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class MessageContainerPresenter : MonoBehaviour
@@ -33,22 +34,33 @@ public class MessageContainerPresenter : MonoBehaviour
 
     private bool wasWaitingForPlayerEmojiFired;
 
+    public UnityEvent OnPizzaMessageSent;
+    public UnityEvent OnPlayerMessageSent;
+
     private void OnEnable()
     {
-        chat.OnChatStarted += ClearMessages;
+        chat.OnPizzaSendsEmoji    += EnqueuePizzaMessage;
+        chat.OnPizzaSendsReaction += EnqueuePizzaReaction;
+        chat.OnPlayerSendsEmoji   += EnqueuePlayerMessage;
+        // chat.OnChatStarted += ClearMessages;
     }
 
     private void OnDisable()
     {
-        chat.OnChatStarted -= ClearMessages;
+        chat.OnPizzaSendsEmoji    += EnqueuePizzaMessage;
+        chat.OnPizzaSendsReaction += EnqueuePizzaReaction;
+        chat.OnPlayerSendsEmoji   += EnqueuePlayerMessage;
+        // chat.OnChatStarted -= ClearMessages;
     }
 
+    /*
     private void ClearMessages()
     {
         messageQueue.Clear();
         foreach (Transform child in messageContainer)
             Destroy(child.gameObject);
     }
+    */
 
     private void Awake()
     {
@@ -56,7 +68,7 @@ public class MessageContainerPresenter : MonoBehaviour
         {
             [MessageType.Player] = playerMessagePrefab,
             [MessageType.PizzaEmoji] = pizzaMessagePrefab,
-            [MessageType.PizzaReaction] = pizzaReactionPrefab
+            [MessageType.PizzaReaction] = pizzaReactionPrefab,
         };
     }
 
@@ -90,9 +102,13 @@ public class MessageContainerPresenter : MonoBehaviour
         MessagePresenter messagePresenter = Instantiate(messagePrefabByType[message.Type], messageContainer);
         messagePresenter.SetMessage(message.Emoji, message.Author);
         messageScroller.verticalNormalizedPosition = 0; // scrolls to bottom
+        if (message.Type == MessageType.Player)
+            OnPlayerMessageSent.Invoke();
+        else
+            OnPizzaMessageSent.Invoke();
     }
     
-    public void EnqueuePizzaMessage(Emoji emoji)  => EnqueueMessage(emoji, chat.Pizza, MessageType.PizzaEmoji);
+    public void EnqueuePizzaMessage(Emoji emoji)   => EnqueueMessage(emoji, chat.Pizza, MessageType.PizzaEmoji);
     public void EnqueuePizzaReaction(Emoji emoji)  => EnqueueMessage(emoji, chat.Pizza, MessageType.PizzaReaction);
 
     public void EnqueuePlayerMessage(Emoji emoji)

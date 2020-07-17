@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ChatPresenter : MonoBehaviour
 {
@@ -7,7 +8,6 @@ public class ChatPresenter : MonoBehaviour
     private MessageContainerPresenter messageContainer;
 
     private Chat chat;
-    public Chat Chat => chat;
 
     private bool chatRunning;
     public bool ChatRunning => chatRunning;
@@ -20,7 +20,11 @@ public class ChatPresenter : MonoBehaviour
 
     public Action OnChatStarted = delegate {  };
     public Action OnWaitingForPlayerEmoji = delegate {  };
-    public Action OnChatFinished = delegate {  };
+    public Action<Emoji> OnPizzaSendsEmoji;   
+    public Action<Emoji> OnPizzaSendsReaction;
+    public Action<Emoji> OnPlayerSendsEmoji;
+
+    public UnityEvent OnChatFinished;
 
     private void Start()
     {
@@ -46,20 +50,19 @@ public class ChatPresenter : MonoBehaviour
     private void SubscribeToChat()
     {
         if (chat == null) return;
-        chat.OnPizzaSendsEmoji    += messageContainer.EnqueuePizzaMessage;
-        chat.OnPizzaSendsReaction += messageContainer.EnqueuePizzaReaction;
+        chat.OnPizzaSendsEmoji    += PizzaSendsEmoji;
+        chat.OnPizzaSendsReaction += PizzaSendsReaction;
         chat.OnChatFinish         += FinishChat;
     }
 
     private void UnsubscribeToChat()
     {
         if (chat == null) return;
-        chat.OnPizzaSendsEmoji    -= messageContainer.EnqueuePizzaMessage;
-        chat.OnPizzaSendsReaction -= messageContainer.EnqueuePizzaReaction;
+        chat.OnPizzaSendsEmoji    -= PizzaSendsEmoji;
+        chat.OnPizzaSendsReaction -= PizzaSendsReaction;
         chat.OnChatFinish         -= FinishChat;
     }
 
-    
     public void StartChat()
     {
         pizza = Game.Current.MatchedPizzas[0];
@@ -70,9 +73,11 @@ public class ChatPresenter : MonoBehaviour
         chatRunning = true;
     }
 
+    private void PizzaSendsEmoji(Emoji emoji) => OnPizzaSendsEmoji.Invoke(emoji);
+    private void PizzaSendsReaction(Emoji emoji) => OnPizzaSendsReaction.Invoke(emoji);
     public void SendPlayerEmoji(Emoji emoji)
     {
-        messageContainer.EnqueuePlayerMessage(emoji);
+        OnPlayerSendsEmoji.Invoke(emoji);
         chat.SendPlayerEmoji(emoji);
     }
 

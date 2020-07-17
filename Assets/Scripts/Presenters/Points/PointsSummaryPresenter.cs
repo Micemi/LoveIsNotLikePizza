@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class PointsSummaryPresenter : MonoBehaviour
 {
@@ -15,6 +18,9 @@ public class PointsSummaryPresenter : MonoBehaviour
     [Header("Points per Pizza")]
     [SerializeField]
     private Transform pointsContainer;
+
+    [SerializeField]
+    private ScrollRect pointsScroller;
 
     [SerializeField]
     private PointsPresenter pointsPrefab;
@@ -43,18 +49,25 @@ public class PointsSummaryPresenter : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Show();
+    }
+
     [ContextMenu("Show")]
     public void Show()
     {
         List<Pizza> pizzasChattedWith = Game.Current.ChattedWithPizzas;
+        pizzasChattedWith.Sort((p, q) => q.Points.CompareTo(p.Points));
         for (int i = 0; i < pizzasChattedWith.Count; i++)
         {
             pointsPresenters[i].SetPizza(pizzasChattedWith[i]);
             pointsPresenters[i].gameObject.SetActive(true);
         }
+        StartCoroutine(SetScrollerToTop());
 
         float points = pizzasChattedWith.Sum(pizza => pizza.Points);
-        totalPointsText.text = points.ToString("0");
+        totalPointsText.text = points.ToString("0") + " °c";
         reputazzioneText.text = ReputazzioneData.GetReputazzione(points);
     }
 
@@ -65,5 +78,12 @@ public class PointsSummaryPresenter : MonoBehaviour
         {
             pointsPresenters[i].gameObject.SetActive(false);
         }
+    }
+
+    private IEnumerator SetScrollerToTop()
+    {
+        yield return null; // Wait 1 frame
+        yield return null; // Wait 1 frame
+        pointsScroller.verticalNormalizedPosition = 1;
     }
 }
