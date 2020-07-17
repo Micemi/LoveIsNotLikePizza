@@ -16,9 +16,4 @@ public class ProfileBtn : MonoBehaviour
       SceneManager.LoadScene ("ProfileScene"); 
     }
 
-    
-    void Update()
-    {
-        
-    }
 }
