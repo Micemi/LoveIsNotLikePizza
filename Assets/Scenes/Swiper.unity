@@ -2229,7 +2229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myFx: {fileID: 1255986487}
-  hoverFx: {fileID: 8300000, guid: 5953498a092c5004abd588a5ec230c8f, type: 3}
+  hoverFx: {fileID: 8300000, guid: 4a87df15afe4425438a45ed781e77995, type: 3}
   clickFx: {fileID: 8300000, guid: de1d551c6a060d949a1534dd742f4e7f, type: 3}
 --- !u!114 &1255986490
 MonoBehaviour:
@@ -2504,7 +2504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myFx: {fileID: 1270366505}
-  hoverFx: {fileID: 8300000, guid: 5953498a092c5004abd588a5ec230c8f, type: 3}
+  hoverFx: {fileID: 8300000, guid: 4a87df15afe4425438a45ed781e77995, type: 3}
   clickFx: {fileID: 8300000, guid: de1d551c6a060d949a1534dd742f4e7f, type: 3}
 --- !u!114 &1270366504
 MonoBehaviour:
