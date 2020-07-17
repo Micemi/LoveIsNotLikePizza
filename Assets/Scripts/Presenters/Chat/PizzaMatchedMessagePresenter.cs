@@ -13,9 +13,14 @@ public class PizzaMatchedMessagePresenter : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI pizzaName;
 
-    private void Awake()
+    private void OnEnable()
     {
         chatPresenter.OnChatStarted += SetPizza;
+    }
+
+    private void OnDisable()
+    {
+        chatPresenter.OnChatStarted -= SetPizza;
     }
 
     private void SetPizza()

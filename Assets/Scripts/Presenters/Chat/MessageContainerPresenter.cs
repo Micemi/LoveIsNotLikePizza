@@ -47,9 +47,9 @@ public class MessageContainerPresenter : MonoBehaviour
 
     private void OnDisable()
     {
-        chat.OnPizzaSendsEmoji    += EnqueuePizzaMessage;
-        chat.OnPizzaSendsReaction += EnqueuePizzaReaction;
-        chat.OnPlayerSendsEmoji   += EnqueuePlayerMessage;
+        chat.OnPizzaSendsEmoji    -= EnqueuePizzaMessage;
+        chat.OnPizzaSendsReaction -= EnqueuePizzaReaction;
+        chat.OnPlayerSendsEmoji   -= EnqueuePlayerMessage;
         // chat.OnChatStarted -= ClearMessages;
     }
 
