@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -48,6 +47,11 @@ public class PointsSummaryPresenter : MonoBehaviour
             pizza.State = PizzaState.Chatted;
             pizza.Points = Random.Range(0, 10000);
         }
+    }
+
+    private void Start()
+    {
+        Show();
     }
 
     [ContextMenu("Show")]
