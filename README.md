@@ -1,3 +1,5 @@
 # LovePizza2
 
-parenthesix experience
+parenthesix experience game jam of july 2020
+
+# [COMPLETED]
